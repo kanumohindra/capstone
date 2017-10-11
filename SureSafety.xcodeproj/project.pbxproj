@@ -15,6 +15,8 @@
 		AEEFEEBA1F8D003B00C09797 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEFEEB81F8D003B00C09797 /* LaunchScreen.storyboard */; };
 		AEEFEEC51F8D003B00C09797 /* SureSafetyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEFEEC41F8D003B00C09797 /* SureSafetyTests.m */; };
 		AEEFEED01F8D003B00C09797 /* SureSafetyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEFEECF1F8D003B00C09797 /* SureSafetyUITests.m */; };
+		AEEFEEDF1F8D961E00C09797 /* footerImage.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEFEEDE1F8D961E00C09797 /* footerImage.png */; };
+		AEEFEEE11F8D996300C09797 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEFEEE01F8D996300C09797 /* Logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		AEEFEECB1F8D003B00C09797 /* SureSafetyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SureSafetyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEEFEECF1F8D003B00C09797 /* SureSafetyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SureSafetyUITests.m; sourceTree = "<group>"; };
 		AEEFEED11F8D003B00C09797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEEFEEDE1F8D961E00C09797 /* footerImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footerImage.png; sourceTree = "<group>"; };
+		AEEFEEE01F8D996300C09797 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 		AEEFEEA91F8D003A00C09797 /* SureSafety */ = {
 			isa = PBXGroup;
 			children = (
+				AEEFEEE01F8D996300C09797 /* Logo.png */,
+				AEEFEEDD1F8D95F800C09797 /* Images */,
 				AEEFEEAD1F8D003A00C09797 /* AppDelegate.h */,
 				AEEFEEAE1F8D003A00C09797 /* AppDelegate.m */,
 				AEEFEEB01F8D003A00C09797 /* ViewController.h */,
@@ -138,6 +144,14 @@
 				AEEFEED11F8D003B00C09797 /* Info.plist */,
 			);
 			path = SureSafetyUITests;
+			sourceTree = "<group>";
+		};
+		AEEFEEDD1F8D95F800C09797 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				AEEFEEDE1F8D961E00C09797 /* footerImage.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,7 +260,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEEFEEDF1F8D961E00C09797 /* footerImage.png in Resources */,
 				AEEFEEBA1F8D003B00C09797 /* LaunchScreen.storyboard in Resources */,
+				AEEFEEE11F8D996300C09797 /* Logo.png in Resources */,
 				AEEFEEB71F8D003B00C09797 /* Assets.xcassets in Resources */,
 				AEEFEEB51F8D003B00C09797 /* Main.storyboard in Resources */,
 			);
