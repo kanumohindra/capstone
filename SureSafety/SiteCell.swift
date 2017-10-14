@@ -15,7 +15,7 @@ class SiteCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         
         departmentName.textAlignment = NSTextAlignment.left
-        departmentName.font = UIFont.boldSystemFont(ofSize: 30)
+        departmentName.font = UIFont.boldSystemFont(ofSize: 14)
         departmentName.backgroundColor = UIColor.clear
         departmentName.textColor = UIColor.black
         
@@ -30,7 +30,7 @@ class SiteCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     override func layoutSubviews() {
-        departmentName.frame = CGRect(x: 100, y: 5, width: 300, height: 30)
+        departmentName.frame = CGRect(x: 0, y: 5, width: 300, height: 30)
     }
 
     override func awakeFromNib() {

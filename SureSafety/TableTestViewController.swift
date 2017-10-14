@@ -13,13 +13,24 @@ class TableTestViewController: UIViewController, UITableViewDataSource, UITableV
     var departments = ["Human Resources", "Financial", "Health and Safety", "Research and Development"]
     
     @IBOutlet var myTableView: UITableView!
+    @IBOutlet var tbDepartment: UITextField!
+    var departmentText = ""
+    
+    @IBAction func showDepartments()
+    {
+        myTableView.dataSource = self
+        myTableView.delegate = self
+        
+        myTableView.isHidden = false
+        myTableView.reloadData()
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return departments.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 30
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -36,11 +47,14 @@ class TableTestViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let indexPath = myTableView.indexPathForSelectedRow //optional, to get from any UIButton for example
         
-        let currentCell = myTableView.cellForRow(at: indexPath!)! as! SiteCell
+        let currentCell = myTableView.cellForRow(at: indexPath) as! SiteCell
+        tbDepartment.text = currentCell.departmentName.text
         
-        print(currentCell.textLabel!.text ?? "test")
+        myTableView.dataSource = nil
+        myTableView.delegate = nil
+        
+        myTableView.isHidden = true
         
     }
     
@@ -54,6 +68,15 @@ class TableTestViewController: UIViewController, UITableViewDataSource, UITableV
         // Do any additional setup after loading the view.
         
         ///myTableView.isHidden = false
+        
+        tbDepartment.isEnabled = false
+        
+        myTableView.dataSource = nil;
+        myTableView.delegate = nil;
+        
+        
+        myTableView.isHidden = true
+        
     }
 
     override func didReceiveMemoryWarning() {
