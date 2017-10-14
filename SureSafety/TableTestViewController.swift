@@ -53,7 +53,7 @@ class TableTestViewController: UIViewController, UITableViewDataSource, UITableV
 
         // Do any additional setup after loading the view.
         
-        myTableView.isHidden = true
+        ///myTableView.isHidden = false
     }
 
     override func didReceiveMemoryWarning() {

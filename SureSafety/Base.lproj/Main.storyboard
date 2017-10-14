@@ -319,10 +319,17 @@
                                 <rect key="frame" x="0.0" y="70" width="375" height="233"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fZM-Dg-fFl" id="huR-IG-7Df"/>
+                                    <outlet property="delegate" destination="fZM-Dg-fFl" id="KNx-wg-vTl"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="myTableView" destination="x4r-xU-NR2" id="leN-mA-1z6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xwg-Ah-mJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
