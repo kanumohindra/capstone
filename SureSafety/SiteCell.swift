@@ -15,7 +15,7 @@ class SiteCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         
         departmentName.textAlignment = NSTextAlignment.left
-        departmentName.font = UIFont.boldSystemFont(ofSize: 30)
+        departmentName.font = UIFont.boldSystemFont(ofSize: 14)
         departmentName.backgroundColor = UIColor.clear
         departmentName.textColor = UIColor.black
         
