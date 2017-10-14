@@ -17,6 +17,8 @@
 		AEEFEED01F8D003B00C09797 /* SureSafetyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEFEECF1F8D003B00C09797 /* SureSafetyUITests.m */; };
 		AEEFEEDF1F8D961E00C09797 /* footerImage.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEFEEDE1F8D961E00C09797 /* footerImage.png */; };
 		AEEFEEE11F8D996300C09797 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEFEEE01F8D996300C09797 /* Logo.png */; };
+		AEF6E28B1F9025EF00AE3937 /* loginHeader.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEF6E28A1F9025EF00AE3937 /* loginHeader.jpg */; };
+		AEF6E28D1F9026CD00AE3937 /* loginHeader1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEF6E28C1F9026CD00AE3937 /* loginHeader1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		AEEFEED11F8D003B00C09797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEEFEEDE1F8D961E00C09797 /* footerImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footerImage.png; sourceTree = "<group>"; };
 		AEEFEEE01F8D996300C09797 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		AEF6E28A1F9025EF00AE3937 /* loginHeader.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loginHeader.jpg; sourceTree = "<group>"; };
+		AEF6E28C1F9026CD00AE3937 /* loginHeader1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loginHeader1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +109,6 @@
 		AEEFEEA91F8D003A00C09797 /* SureSafety */ = {
 			isa = PBXGroup;
 			children = (
-				AEEFEEE01F8D996300C09797 /* Logo.png */,
 				AEEFEEDD1F8D95F800C09797 /* Images */,
 				AEEFEEAD1F8D003A00C09797 /* AppDelegate.h */,
 				AEEFEEAE1F8D003A00C09797 /* AppDelegate.m */,
@@ -149,6 +152,9 @@
 		AEEFEEDD1F8D95F800C09797 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AEF6E28A1F9025EF00AE3937 /* loginHeader.jpg */,
+				AEF6E28C1F9026CD00AE3937 /* loginHeader1.jpg */,
+				AEEFEEE01F8D996300C09797 /* Logo.png */,
 				AEEFEEDE1F8D961E00C09797 /* footerImage.png */,
 			);
 			name = Images;
@@ -262,7 +268,9 @@
 			files = (
 				AEEFEEDF1F8D961E00C09797 /* footerImage.png in Resources */,
 				AEEFEEBA1F8D003B00C09797 /* LaunchScreen.storyboard in Resources */,
+				AEF6E28B1F9025EF00AE3937 /* loginHeader.jpg in Resources */,
 				AEEFEEE11F8D996300C09797 /* Logo.png in Resources */,
+				AEF6E28D1F9026CD00AE3937 /* loginHeader1.jpg in Resources */,
 				AEEFEEB71F8D003B00C09797 /* Assets.xcassets in Resources */,
 				AEEFEEB51F8D003B00C09797 /* Main.storyboard in Resources */,
 			);
@@ -523,6 +531,7 @@
 				AEEFEED61F8D003B00C09797 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AEEFEED71F8D003B00C09797 /* Build configuration list for PBXNativeTarget "SureSafetyTests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +540,7 @@
 				AEEFEED91F8D003B00C09797 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AEEFEEDA1F8D003B00C09797 /* Build configuration list for PBXNativeTarget "SureSafetyUITests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +549,7 @@
 				AEEFEEDC1F8D003B00C09797 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
