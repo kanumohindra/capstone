@@ -29,11 +29,14 @@ class SiteCell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    override func layoutSubviews() {
+        departmentName.frame = CGRect(x: 100, y: 5, width: 300, height: 30)
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        //really
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

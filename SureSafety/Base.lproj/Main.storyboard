@@ -342,6 +342,10 @@
                                     <outlet property="delegate" destination="fZM-Dg-fFl" id="KNx-wg-vTl"/>
                                 </connections>
                             </tableView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1WB-dB-xRq">
+                                <rect key="frame" x="0.0" y="410" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
