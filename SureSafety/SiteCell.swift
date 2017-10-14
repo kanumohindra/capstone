@@ -30,7 +30,7 @@ class SiteCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     override func layoutSubviews() {
-        departmentName.frame = CGRect(x: 100, y: 5, width: 300, height: 30)
+        departmentName.frame = CGRect(x: 0, y: 5, width: 300, height: 30)
     }
 
     override func awakeFromNib() {
