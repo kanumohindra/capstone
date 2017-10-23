@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		AE6547421F928E18005A6BB5 /* TableTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6547411F928E18005A6BB5 /* TableTestViewController.swift */; };
 		AE6547441F928FEB005A6BB5 /* SiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6547431F928FEB005A6BB5 /* SiteCell.swift */; };
+		AE78C5021F9D50C00000DCA5 /* viewControllerBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = AE78C5011F9D50C00000DCA5 /* viewControllerBackground.png */; };
+		AE78C5041F9D51EF0000DCA5 /* viewControllerBackgroundHome.png in Resources */ = {isa = PBXBuildFile; fileRef = AE78C5031F9D51EF0000DCA5 /* viewControllerBackgroundHome.png */; };
+		AE78C5061F9D5FF10000DCA5 /* viewControllerBackgroundOnset.png in Resources */ = {isa = PBXBuildFile; fileRef = AE78C5051F9D5FF10000DCA5 /* viewControllerBackgroundOnset.png */; };
 		AEEFEEAC1F8D003A00C09797 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEFEEAB1F8D003A00C09797 /* main.m */; };
 		AEEFEEAF1F8D003A00C09797 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEFEEAE1F8D003A00C09797 /* AppDelegate.m */; };
 		AEEFEEB21F8D003B00C09797 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEFEEB11F8D003A00C09797 /* ViewController.m */; };
@@ -44,6 +47,9 @@
 		AE6547401F928E18005A6BB5 /* SureSafety-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SureSafety-Bridging-Header.h"; sourceTree = "<group>"; };
 		AE6547411F928E18005A6BB5 /* TableTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableTestViewController.swift; sourceTree = "<group>"; };
 		AE6547431F928FEB005A6BB5 /* SiteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiteCell.swift; sourceTree = "<group>"; };
+		AE78C5011F9D50C00000DCA5 /* viewControllerBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewControllerBackground.png; sourceTree = "<group>"; };
+		AE78C5031F9D51EF0000DCA5 /* viewControllerBackgroundHome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewControllerBackgroundHome.png; sourceTree = "<group>"; };
+		AE78C5051F9D5FF10000DCA5 /* viewControllerBackgroundOnset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewControllerBackgroundOnset.png; sourceTree = "<group>"; };
 		AEEFEEA71F8D003A00C09797 /* SureSafety.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SureSafety.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEEFEEAB1F8D003A00C09797 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AEEFEEAD1F8D003A00C09797 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -160,6 +166,9 @@
 		AEEFEEDD1F8D95F800C09797 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AE78C5051F9D5FF10000DCA5 /* viewControllerBackgroundOnset.png */,
+				AE78C5031F9D51EF0000DCA5 /* viewControllerBackgroundHome.png */,
+				AE78C5011F9D50C00000DCA5 /* viewControllerBackground.png */,
 				AEF6E28A1F9025EF00AE3937 /* loginHeader.jpg */,
 				AEF6E28C1F9026CD00AE3937 /* loginHeader1.jpg */,
 				AEEFEEE01F8D996300C09797 /* Logo.png */,
@@ -281,7 +290,10 @@
 				AEEFEEE11F8D996300C09797 /* Logo.png in Resources */,
 				AEF6E28D1F9026CD00AE3937 /* loginHeader1.jpg in Resources */,
 				AEEFEEB71F8D003B00C09797 /* Assets.xcassets in Resources */,
+				AE78C5021F9D50C00000DCA5 /* viewControllerBackground.png in Resources */,
 				AEEFEEB51F8D003B00C09797 /* Main.storyboard in Resources */,
+				AE78C5061F9D5FF10000DCA5 /* viewControllerBackgroundOnset.png in Resources */,
+				AE78C5041F9D51EF0000DCA5 /* viewControllerBackgroundHome.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
