@@ -1685,15 +1685,15 @@
         <image name="viewControllerBackgroundOnset.png" width="500" height="750"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0sh-X7-UIn"/>
+        <segue reference="UhQ-Gh-viv"/>
+        <segue reference="9Sa-Bv-mq5"/>
+        <segue reference="bHL-YQ-JcL"/>
+        <segue reference="Zjr-DE-m7r"/>
+        <segue reference="Df5-k5-fq0"/>
+        <segue reference="M70-lt-dKp"/>
         <segue reference="Bnu-qj-vIq"/>
         <segue reference="wEe-Ey-Zwu"/>
         <segue reference="Ook-zO-2Md"/>
-        <segue reference="APg-Nn-iqv"/>
-        <segue reference="Df5-k5-fq0"/>
-        <segue reference="M70-lt-dKp"/>
-        <segue reference="EJn-wI-mFO"/>
-        <segue reference="Jpc-6P-dIH"/>
         <segue reference="Ni0-kz-F9n"/>
     </inferredMetricsTieBreakers>
 </document>

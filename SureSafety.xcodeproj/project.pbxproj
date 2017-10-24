@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		AE6547421F928E18005A6BB5 /* TableTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6547411F928E18005A6BB5 /* TableTestViewController.swift */; };
 		AE6547441F928FEB005A6BB5 /* SiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6547431F928FEB005A6BB5 /* SiteCell.swift */; };
-		AE78C5021F9D50C00000DCA5 /* viewControllerBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = AE78C5011F9D50C00000DCA5 /* viewControllerBackground.png */; };
-		AE78C5041F9D51EF0000DCA5 /* viewControllerBackgroundHome.png in Resources */ = {isa = PBXBuildFile; fileRef = AE78C5031F9D51EF0000DCA5 /* viewControllerBackgroundHome.png */; };
 		AE78C5061F9D5FF10000DCA5 /* viewControllerBackgroundOnset.png in Resources */ = {isa = PBXBuildFile; fileRef = AE78C5051F9D5FF10000DCA5 /* viewControllerBackgroundOnset.png */; };
 		AE78C5081F9ECF7E0000DCA5 /* HomePageWelcomeNote.png in Resources */ = {isa = PBXBuildFile; fileRef = AE78C5071F9ECF7E0000DCA5 /* HomePageWelcomeNote.png */; };
 		AE78C50A1F9ED0160000DCA5 /* HomePageWelcomeNote2.png in Resources */ = {isa = PBXBuildFile; fileRef = AE78C5091F9ED0160000DCA5 /* HomePageWelcomeNote2.png */; };
@@ -49,8 +47,6 @@
 		AE6547401F928E18005A6BB5 /* SureSafety-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SureSafety-Bridging-Header.h"; sourceTree = "<group>"; };
 		AE6547411F928E18005A6BB5 /* TableTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableTestViewController.swift; sourceTree = "<group>"; };
 		AE6547431F928FEB005A6BB5 /* SiteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiteCell.swift; sourceTree = "<group>"; };
-		AE78C5011F9D50C00000DCA5 /* viewControllerBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewControllerBackground.png; sourceTree = "<group>"; };
-		AE78C5031F9D51EF0000DCA5 /* viewControllerBackgroundHome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewControllerBackgroundHome.png; sourceTree = "<group>"; };
 		AE78C5051F9D5FF10000DCA5 /* viewControllerBackgroundOnset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewControllerBackgroundOnset.png; sourceTree = "<group>"; };
 		AE78C5071F9ECF7E0000DCA5 /* HomePageWelcomeNote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomePageWelcomeNote.png; sourceTree = "<group>"; };
 		AE78C5091F9ED0160000DCA5 /* HomePageWelcomeNote2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomePageWelcomeNote2.png; sourceTree = "<group>"; };
@@ -173,8 +169,6 @@
 				AE78C5091F9ED0160000DCA5 /* HomePageWelcomeNote2.png */,
 				AE78C5071F9ECF7E0000DCA5 /* HomePageWelcomeNote.png */,
 				AE78C5051F9D5FF10000DCA5 /* viewControllerBackgroundOnset.png */,
-				AE78C5031F9D51EF0000DCA5 /* viewControllerBackgroundHome.png */,
-				AE78C5011F9D50C00000DCA5 /* viewControllerBackground.png */,
 				AEF6E28A1F9025EF00AE3937 /* loginHeader.jpg */,
 				AEF6E28C1F9026CD00AE3937 /* loginHeader1.jpg */,
 				AEEFEEE01F8D996300C09797 /* Logo.png */,
@@ -296,12 +290,10 @@
 				AEEFEEE11F8D996300C09797 /* Logo.png in Resources */,
 				AEF6E28D1F9026CD00AE3937 /* loginHeader1.jpg in Resources */,
 				AEEFEEB71F8D003B00C09797 /* Assets.xcassets in Resources */,
-				AE78C5021F9D50C00000DCA5 /* viewControllerBackground.png in Resources */,
 				AE78C5081F9ECF7E0000DCA5 /* HomePageWelcomeNote.png in Resources */,
 				AEEFEEB51F8D003B00C09797 /* Main.storyboard in Resources */,
 				AE78C50A1F9ED0160000DCA5 /* HomePageWelcomeNote2.png in Resources */,
 				AE78C5061F9D5FF10000DCA5 /* viewControllerBackgroundOnset.png in Resources */,
-				AE78C5041F9D51EF0000DCA5 /* viewControllerBackgroundHome.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
