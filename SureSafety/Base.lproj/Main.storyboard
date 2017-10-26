@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aBA-FN-r6F">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aBA-FN-r6F">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -292,7 +292,7 @@
         <!--Incident Onset-->
         <scene sceneID="Gmc-On-d0b">
             <objects>
-                <viewController title="Incident Onset" id="eyi-jR-zLK" sceneMemberID="viewController">
+                <viewController title="Incident Onset" id="eyi-jR-zLK" customClass="OnSetOfIncidentViewController" customModule="SureSafety" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vxf-Zk-xnu"/>
                         <viewControllerLayoutGuide type="bottom" id="uBp-mv-JYV"/>
@@ -318,14 +318,14 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="595"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6nu-42-3Zn">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6nu-42-3Zn">
                                 <rect key="frame" x="10" y="187" width="170" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kNn-gc-CDN">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kNn-gc-CDN">
                                 <rect key="frame" x="188" y="187" width="170" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -338,12 +338,19 @@
                                 <date key="date" timeIntervalSinceReferenceDate="530048832.15807599">
                                     <!--2017-10-18 19:47:12 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="suddenDatePickerChangedWithSender:" destination="eyi-jR-zLK" eventType="valueChanged" id="5b3-Az-6nO"/>
+                                    <action selector="suddenDatePickerChangedWithSender:" destination="eyi-jR-zLK" eventType="touchUpInside" id="p5K-CE-Wqu"/>
+                                </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DoT-Li-y95">
                                 <rect key="frame" x="12" y="108" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.34117648010000001" green="0.62352943419999995" blue="0.16862745579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btn_boxWithSender:" destination="eyi-jR-zLK" eventType="touchUpInside" id="FlO-5P-Kww"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A Sudden &amp; Specific Event Occured" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnW-gx-ARe">
                                 <rect key="frame" x="60" y="108" width="295" height="30"/>
@@ -385,6 +392,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.34117648010000001" green="0.62352943419999995" blue="0.16862745579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btn_box2WithSender:" destination="eyi-jR-zLK" eventType="touchUpInside" id="ffc-UN-Dmt"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gradually Over Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLh-b2-KOh">
                                 <rect key="frame" x="60" y="315" width="295" height="30"/>
@@ -422,6 +432,10 @@
                                 <date key="date" timeIntervalSinceReferenceDate="530048832.15807599">
                                     <!--2017-10-18 19:47:12 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="gradStartDatePickerChangedWithSender:" destination="eyi-jR-zLK" eventType="touchUpInside" id="40O-wc-n6T"/>
+                                    <action selector="gradStartDatePickerChangedWithSender:" destination="eyi-jR-zLK" eventType="valueChanged" id="7sh-mS-Ry2"/>
+                                </connections>
                             </datePicker>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ax4-HF-vjn">
                                 <rect key="frame" x="12" y="530" width="343" height="82"/>
@@ -429,10 +443,31 @@
                                 <date key="date" timeIntervalSinceReferenceDate="530048832.15807599">
                                     <!--2017-10-18 19:47:12 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="gradEndDatePickerChangedWithSender:" destination="eyi-jR-zLK" eventType="touchUpInside" id="Bmf-9v-LOz"/>
+                                    <action selector="gradEndDatePickerChangedWithSender:" destination="eyi-jR-zLK" eventType="valueChanged" id="YhI-l3-Yka"/>
+                                </connections>
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="btn_box" destination="DoT-Li-y95" id="6X7-R3-GRQ"/>
+                        <outlet property="btn_box2" destination="dID-2j-VhU" id="z10-iE-rQJ"/>
+                        <outlet property="gradEndDate" destination="4gr-aK-xpp" id="5wT-rQ-v9e"/>
+                        <outlet property="gradEndDatePicker" destination="ax4-HF-vjn" id="Wtm-4b-1a0"/>
+                        <outlet property="gradStartDate" destination="bmx-qE-gM4" id="kNX-DN-7gN"/>
+                        <outlet property="gradStartDatePicker" destination="ZWQ-el-feT" id="P9a-WQ-qn1"/>
+                        <outlet property="lblDate" destination="tLN-xh-Ji2" id="wW6-5h-EZJ"/>
+                        <outlet property="lblEnd" destination="CU3-Z0-f6n" id="Nvl-oK-bID"/>
+                        <outlet property="lblGradTitle" destination="rLh-b2-KOh" id="yut-FZ-NsX"/>
+                        <outlet property="lblStart" destination="BY8-xN-aBx" id="zfF-ir-1qS"/>
+                        <outlet property="lblSuddenTitle" destination="nnW-gx-ARe" id="KVV-tu-uC5"/>
+                        <outlet property="lblTime" destination="cYD-oz-IPr" id="z4l-Ju-kqY"/>
+                        <outlet property="suddenDateBox" destination="6nu-42-3Zn" id="Ojf-KH-RFg"/>
+                        <outlet property="suddenDatePicker" destination="soY-2n-ZGZ" id="pXX-dm-j0I"/>
+                        <outlet property="suddenTimeBox" destination="kNn-gc-CDN" id="V3a-l3-9oF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xHs-NT-Ctu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -572,7 +607,7 @@
         <!--Incident Reporting 1-->
         <scene sceneID="Ptq-0Y-3vS">
             <objects>
-                <viewController title="Incident Reporting 1" id="S3F-1t-MK7" sceneMemberID="viewController">
+                <viewController title="Incident Reporting 1" id="S3F-1t-MK7" customClass="IncidentReporting1ViewController" customModule="SureSafety" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lf2-nG-EjA"/>
                         <viewControllerLayoutGuide type="bottom" id="aKQ-zI-2T5"/>
@@ -598,14 +633,14 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="595"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Usx-zC-9YS">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Usx-zC-9YS">
                                 <rect key="frame" x="11" y="175" width="170" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9jV-yZ-HkN">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9jV-yZ-HkN">
                                 <rect key="frame" x="189" y="175" width="170" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -618,6 +653,10 @@
                                 <date key="date" timeIntervalSinceReferenceDate="530048832.15807599">
                                     <!--2017-10-18 19:47:12 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="datePickerChangedWithSender:" destination="S3F-1t-MK7" eventType="valueChanged" id="NbG-LZ-8JK"/>
+                                    <action selector="datePickerChangedWithSender:" destination="S3F-1t-MK7" eventType="touchUpInside" id="fi9-NF-whm"/>
+                                </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Incident Reported on:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nm1-2R-rzg">
                                 <rect key="frame" x="16" y="96" width="295" height="30"/>
@@ -692,6 +731,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="dateBox" destination="Usx-zC-9YS" id="hyz-hC-o0f"/>
+                        <outlet property="datePicker" destination="9pa-WG-VHY" id="ZlN-PM-lMV"/>
+                        <outlet property="timeBox" destination="9jV-yZ-HkN" id="jch-dT-juw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PYq-cp-4OF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1204,15 +1248,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jpq-oI-wxu">
+                                <rect key="frame" x="0.0" y="392" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="myTableView" destination="x4r-xU-NR2" id="leN-mA-1z6"/>
+                        <outlet property="searchDisplayController" destination="jcq-Wr-Pt6" id="EcN-6d-utb"/>
                         <outlet property="tbDepartment" destination="cDF-YH-2St" id="AyX-dA-IhE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xwg-Ah-mJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="jcq-Wr-Pt6">
+                    <connections>
+                        <outlet property="delegate" destination="fZM-Dg-fFl" id="whN-oA-RfH"/>
+                        <outlet property="searchContentsController" destination="fZM-Dg-fFl" id="Pbb-8D-htN"/>
+                        <outlet property="searchResultsDataSource" destination="fZM-Dg-fFl" id="LyS-dH-0sX"/>
+                        <outlet property="searchResultsDelegate" destination="fZM-Dg-fFl" id="rsi-Q0-shP"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="921.58920539730138"/>
         </scene>
@@ -1737,14 +1795,14 @@
         <image name="viewControllerBackgroundOnset.png" width="500" height="750"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="APg-Nn-iqv"/>
         <segue reference="0sh-X7-UIn"/>
-        <segue reference="Bnu-qj-vIq"/>
+        <segue reference="3vB-eI-5mE"/>
         <segue reference="d21-Id-9fY"/>
         <segue reference="Df5-k5-fq0"/>
         <segue reference="97E-AL-Pf3"/>
         <segue reference="Zjr-DE-m7r"/>
         <segue reference="fnV-yk-3B6"/>
-        <segue reference="9Sa-Bv-mq5"/>
         <segue reference="Ni0-kz-F9n"/>
         <segue reference="9f5-5I-vwM"/>
     </inferredMetricsTieBreakers>
