@@ -49,11 +49,11 @@ class OnSetOfIncidentViewController: UIViewController {
         lblEnd.isHidden = true
         
         
-        btn_box.setBackgroundImage(UIImage(named: "footerImage.png"), for: .normal)
-        btn_box.setBackgroundImage(UIImage(named: "Logo.png"), for: .selected)
+        btn_box.setBackgroundImage(UIImage(named: "unchecked.png"), for: .normal)
+        btn_box.setBackgroundImage(UIImage(named: "checkbox-checked.png"), for: .selected)
         
-        btn_box2.setBackgroundImage(UIImage(named: "footerImage.png"), for: .normal)
-        btn_box2.setBackgroundImage(UIImage(named: "Logo.png"), for: .selected)
+        btn_box2.setBackgroundImage(UIImage(named: "unchecked.png"), for: .normal)
+        btn_box2.setBackgroundImage(UIImage(named: "checkbox-checked.png"), for: .selected)
     }
     
     @IBAction func btn_box(sender: UIButton) {

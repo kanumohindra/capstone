@@ -153,7 +153,7 @@
         <!--Incident Profile-->
         <scene sceneID="KUu-uA-gT7">
             <objects>
-                <viewController title="Incident Profile" id="QPG-4r-UXV" sceneMemberID="viewController">
+                <viewController title="Incident Profile" id="QPG-4r-UXV" customClass="IncidentProfileViewController" customModule="SureSafety" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qCv-hm-m9F"/>
                         <viewControllerLayoutGuide type="bottom" id="21I-0t-2D9"/>
@@ -343,11 +343,9 @@
                                     <action selector="suddenDatePickerChangedWithSender:" destination="eyi-jR-zLK" eventType="touchUpInside" id="p5K-CE-Wqu"/>
                                 </connections>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DoT-Li-y95">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DoT-Li-y95">
                                 <rect key="frame" x="12" y="108" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.34117648010000001" green="0.62352943419999995" blue="0.16862745579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="btn_boxWithSender:" destination="eyi-jR-zLK" eventType="touchUpInside" id="FlO-5P-Kww"/>
                                 </connections>
@@ -387,11 +385,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dID-2j-VhU">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dID-2j-VhU">
                                 <rect key="frame" x="12" y="315" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.34117648010000001" green="0.62352943419999995" blue="0.16862745579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="btn_box2WithSender:" destination="eyi-jR-zLK" eventType="touchUpInside" id="ffc-UN-Dmt"/>
                                 </connections>
@@ -835,7 +831,7 @@
         <!--Incident Reporting 4-->
         <scene sceneID="P9i-m0-S0I">
             <objects>
-                <viewController title="Incident Reporting 4" id="aYt-jK-TJt" sceneMemberID="viewController">
+                <viewController title="Incident Reporting 4" id="aYt-jK-TJt" customClass="IncidentReporting4ViewController" customModule="SureSafety" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uzM-OU-gWA"/>
                         <viewControllerLayoutGuide type="bottom" id="n2h-K0-SLk"/>
@@ -888,6 +884,10 @@
                                 <date key="date" timeIntervalSinceReferenceDate="530048832.15807599">
                                     <!--2017-10-18 19:47:12 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="datePickerChangedWithSender:" destination="aYt-jK-TJt" eventType="touchUpInside" id="a1P-8G-Pva"/>
+                                    <action selector="datePickerChangedWithSender:" destination="aYt-jK-TJt" eventType="valueChanged" id="gdE-Az-j5X"/>
+                                </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2P-k8-JxV">
                                 <rect key="frame" x="9" y="259" width="97" height="42"/>
@@ -933,23 +933,26 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oP-jV-lsT">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oP-jV-lsT">
                                 <rect key="frame" x="42" y="390" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.34117648010000001" green="0.62352943419999995" blue="0.16862745579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="absenceBoxYesWithSender:" destination="aYt-jK-TJt" eventType="touchUpInside" id="yO9-yo-qoB"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBj-96-ALq">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBj-96-ALq">
                                 <rect key="frame" x="150" y="390" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.34117648010000001" green="0.62352943419999995" blue="0.16862745579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="absenceBoxNoWithSender:" destination="aYt-jK-TJt" eventType="touchUpInside" id="iNt-hH-YKx"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cM-P5-ZEc">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cM-P5-ZEc">
                                 <rect key="frame" x="246" y="390" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.34117648010000001" green="0.62352943419999995" blue="0.16862745579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="absenceBoxUnknownWithSender:" destination="aYt-jK-TJt" eventType="touchUpInside" id="jqJ-8t-VxA"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30n-hv-Lt6">
                                 <rect key="frame" x="75" y="392" width="28" height="21"/>
@@ -965,17 +968,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oe-si-Koe">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oe-si-Koe">
                                 <rect key="frame" x="169" y="96" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.34117648010000001" green="0.62352943419999995" blue="0.16862745579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="firstAidBoxYesWithSender:" destination="aYt-jK-TJt" eventType="touchUpInside" id="V9i-Q2-Xw5"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3j-2t-19M">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3j-2t-19M">
                                 <rect key="frame" x="246" y="96" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.34117648010000001" green="0.62352943419999995" blue="0.16862745579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="firstAidBoxNoWithSender:" destination="aYt-jK-TJt" eventType="touchUpInside" id="6Yp-MZ-yf9"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lJ-j8-lF7">
                                 <rect key="frame" x="202" y="98" width="28" height="21"/>
@@ -1011,6 +1016,10 @@
                                 <date key="date" timeIntervalSinceReferenceDate="530048832.15807599">
                                     <!--2017-10-18 19:47:12 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="datePicker2ChangedWithSender:" destination="aYt-jK-TJt" eventType="valueChanged" id="5oG-At-B2U"/>
+                                    <action selector="datePicker2ChangedWithSender:" destination="aYt-jK-TJt" eventType="touchUpInside" id="LO7-hi-TBn"/>
+                                </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unknown" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Kg-se-Vng">
                                 <rect key="frame" x="283" y="392" width="72" height="21"/>
@@ -1022,6 +1031,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="absenceBoxNo" destination="FBj-96-ALq" id="RZS-2h-ujl"/>
+                        <outlet property="absenceBoxUnknown" destination="1cM-P5-ZEc" id="XFt-bh-Y9k"/>
+                        <outlet property="absenceBoxYes" destination="2oP-jV-lsT" id="qPQ-9f-jyI"/>
+                        <outlet property="datePicker" destination="aer-mj-4zM" id="uqd-4m-5hs"/>
+                        <outlet property="datePicker2" destination="DC7-4I-Pc0" id="M21-yc-q6K"/>
+                        <outlet property="firstAidBoxNo" destination="C3j-2t-19M" id="1pR-B4-cnv"/>
+                        <outlet property="firstAidBoxYes" destination="8oe-si-Koe" id="IhM-sv-uJ7"/>
+                        <outlet property="txtDate" destination="R3i-X4-jNi" id="l0h-bJ-ybe"/>
+                        <outlet property="txtDayOff" destination="T2D-YA-1Dt" id="w3m-fX-OiD"/>
+                        <outlet property="txtName" destination="bwt-73-cro" id="DJS-vk-oxj"/>
+                        <outlet property="txtPosition" destination="2Di-fr-3yl" id="r0p-uc-Zpg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fsN-bi-dXN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1030,7 +1052,7 @@
         <!--Incident Reporting 5-->
         <scene sceneID="ItC-sz-rAL">
             <objects>
-                <viewController title="Incident Reporting 5" id="dnD-AT-7lg" sceneMemberID="viewController">
+                <viewController title="Incident Reporting 5" id="dnD-AT-7lg" customClass="IncidentReporting5ViewController" customModule="SureSafety" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aZf-qz-d00"/>
                         <viewControllerLayoutGuide type="bottom" id="PUK-fO-SxG"/>
@@ -1069,23 +1091,23 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPh-WB-vrB">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPh-WB-vrB">
                                 <rect key="frame" x="50" y="130" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.34117648010000001" green="0.62352943419999995" blue="0.16862745579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="medYesWithSender:" destination="dnD-AT-7lg" eventType="touchUpInside" id="Pgj-LX-o2j"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSM-Wq-TQQ">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSM-Wq-TQQ">
                                 <rect key="frame" x="173" y="130" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.34117648010000001" green="0.62352943419999995" blue="0.16862745579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="medNoWithSender:" destination="dnD-AT-7lg" eventType="touchUpInside" id="h5G-n2-1rO"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddx-rD-cua">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddx-rD-cua">
                                 <rect key="frame" x="296" y="130" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.34117648010000001" green="0.62352943419999995" blue="0.16862745579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZkN-MC-sDh">
                                 <rect key="frame" x="42" y="168" width="51" height="31"/>
@@ -1114,6 +1136,10 @@
                                 <date key="date" timeIntervalSinceReferenceDate="530048832.15807599">
                                     <!--2017-10-18 19:47:12 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="datePickerChangedWithSender:" destination="dnD-AT-7lg" eventType="touchUpInside" id="aaw-3X-EEU"/>
+                                    <action selector="datePickerChangedWithSender:" destination="dnD-AT-7lg" eventType="valueChanged" id="s5f-tH-b7q"/>
+                                </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Facility Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDX-p2-UX7">
                                 <rect key="frame" x="16" y="367" width="98" height="42"/>
@@ -1179,6 +1205,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="aWC-3z-EWm" id="L8S-y1-ihf"/>
+                        <outlet property="medNo" destination="WSM-Wq-TQQ" id="b7L-uR-lPt"/>
+                        <outlet property="medUnknown" destination="Ddx-rD-cua" id="Pn1-Cn-AvQ"/>
+                        <outlet property="medYes" destination="rPh-WB-vrB" id="3kp-y9-Cwv"/>
+                        <outlet property="txtTreatedOn" destination="adM-Ba-01p" id="7AY-6S-2aL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AgP-V0-tau" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1274,10 +1307,10 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="921.58920539730138"/>
         </scene>
-        <!--View Controller-->
+        <!--Hazard Profile View Controller-->
         <scene sceneID="afY-lJ-cbh">
             <objects>
-                <viewController id="0uK-aH-mUh" sceneMemberID="viewController">
+                <viewController id="0uK-aH-mUh" customClass="HazardProfileViewController" customModule="SureSafety" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="14j-yD-6We"/>
                         <viewControllerLayoutGuide type="bottom" id="Ewz-Xu-jIM"/>
@@ -1408,10 +1441,10 @@
             </objects>
             <point key="canvasLocation" x="921" y="788"/>
         </scene>
-        <!--View Controller-->
+        <!--Hazard Details View Controller-->
         <scene sceneID="fyN-fN-1Sc">
             <objects>
-                <viewController id="A3n-u4-mlu" sceneMemberID="viewController">
+                <viewController id="A3n-u4-mlu" customClass="HazardDetailsViewController" customModule="SureSafety" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N59-tS-aFH"/>
                         <viewControllerLayoutGuide type="bottom" id="FHV-Vj-Yc4"/>
@@ -1444,11 +1477,12 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3J-6Y-vrB">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3J-6Y-vrB">
                                 <rect key="frame" x="16" y="499" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.34117648010000001" green="0.62352943419999995" blue="0.16862745579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="workSiteBoxWithSender:" destination="A3n-u4-mlu" eventType="touchUpInside" id="zVl-QP-HEt"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="scd-He-Eah">
                                 <rect key="frame" x="13" y="321" width="170" height="30"/>
@@ -1470,6 +1504,10 @@
                                 <date key="date" timeIntervalSinceReferenceDate="530048832.15807599">
                                     <!--2017-10-18 19:47:12 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="datePickerChangedWithSender:" destination="A3n-u4-mlu" eventType="valueChanged" id="qwy-f8-0wt"/>
+                                    <action selector="datePickerChangedWithSender:" destination="A3n-u4-mlu" eventType="touchUpInside" id="x3N-YH-DJ2"/>
+                                </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hazard Observed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBZ-oe-zFp">
                                 <rect key="frame" x="13" y="242" width="295" height="30"/>
@@ -1522,11 +1560,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14c-lH-Nux">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14c-lH-Nux">
                                 <rect key="frame" x="16" y="543" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.34117648010000001" green="0.62352943419999995" blue="0.16862745579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="offSiteBoxWithSender:" destination="A3n-u4-mlu" eventType="touchUpInside" id="ILf-3P-yfi"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Off-Site:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRc-BB-T1P">
                                 <rect key="frame" x="54" y="537" width="85" height="42"/>
@@ -1542,11 +1581,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAT-cw-tSL">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAT-cw-tSL">
                                 <rect key="frame" x="32" y="188" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.34117648010000001" green="0.62352943419999995" blue="0.16862745579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="safetyHazardBoxWithSender:" destination="A3n-u4-mlu" eventType="touchUpInside" id="goZ-g8-NQe"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Safety Hazard - Could cause Injury" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDW-It-0j0">
                                 <rect key="frame" x="70" y="185" width="271" height="30"/>
@@ -1555,11 +1595,12 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4u-SX-GMx">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4u-SX-GMx">
                                 <rect key="frame" x="32" y="142" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.34117648010000001" green="0.62352943419999995" blue="0.16862745579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="healthHazardBoxWithSender:" destination="A3n-u4-mlu" eventType="touchUpInside" id="mfB-4n-pxw"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Health Hazard - Could cause Illness" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yky-mc-8TQ">
                                 <rect key="frame" x="70" y="139" width="271" height="30"/>
@@ -1571,15 +1612,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="Lz6-tx-ATN" id="quz-bp-aFs"/>
+                        <outlet property="healthHazardBox" destination="A4u-SX-GMx" id="0UM-8k-405"/>
+                        <outlet property="offSiteBox" destination="14c-lH-Nux" id="gn3-SC-4no"/>
+                        <outlet property="safetyHazardBox" destination="oAT-cw-tSL" id="WKP-nq-HvZ"/>
+                        <outlet property="txtDate" destination="scd-He-Eah" id="XoI-LF-0Fv"/>
+                        <outlet property="txtOffSite" destination="4Zv-7n-Kc5" id="39K-rz-1g9"/>
+                        <outlet property="txtTime" destination="T7N-iC-TbJ" id="4Bp-Nq-3la"/>
+                        <outlet property="txtWorkSite" destination="AQL-nj-3gR" id="XWr-Dv-RRa"/>
+                        <outlet property="workSiteBox" destination="L3J-6Y-vrB" id="b1k-tM-4UM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D19-2I-ksB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="961" y="1612"/>
         </scene>
-        <!--View Controller-->
+        <!--Hazard Onset1 View Controller-->
         <scene sceneID="bue-SW-X8g">
             <objects>
-                <viewController id="ZWE-Zy-Z4K" sceneMemberID="viewController">
+                <viewController id="ZWE-Zy-Z4K" customClass="HazardOnset1ViewController" customModule="SureSafety" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CvI-ih-J1b"/>
                         <viewControllerLayoutGuide type="bottom" id="mEB-xG-Ea8"/>
@@ -1671,10 +1723,10 @@
             </objects>
             <point key="canvasLocation" x="1791" y="1636"/>
         </scene>
-        <!--View Controller-->
+        <!--Hazard Onset2 View Controller-->
         <scene sceneID="Xqd-WQ-gXd">
             <objects>
-                <viewController id="9YC-3m-bwm" sceneMemberID="viewController">
+                <viewController id="9YC-3m-bwm" customClass="HazardOnset2ViewController" customModule="SureSafety" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ftw-Tu-mBL"/>
                         <viewControllerLayoutGuide type="bottom" id="ykZ-dl-Inr"/>
@@ -1728,11 +1780,12 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbx-rD-Z2x">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbx-rD-Z2x">
                                 <rect key="frame" x="200" y="321" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.34117648010000001" green="0.62352943419999995" blue="0.16862745579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="resolvedNoWithSender:" destination="9YC-3m-bwm" eventType="touchUpInside" id="4m5-qH-3EP"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiM-mR-nSi">
                                 <rect key="frame" x="238" y="318" width="121" height="30"/>
@@ -1741,11 +1794,12 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hnt-hI-r9Y">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hnt-hI-r9Y">
                                 <rect key="frame" x="16" y="321" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.34117648010000001" green="0.62352943419999995" blue="0.16862745579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="resolvedYesWithSender:" destination="9YC-3m-bwm" eventType="touchUpInside" id="7tQ-1Z-ytJ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SV3-ti-JpU">
                                 <rect key="frame" x="54" y="318" width="121" height="30"/>
@@ -1754,11 +1808,12 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruR-D5-epc">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruR-D5-epc">
                                 <rect key="frame" x="200" y="372" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.34117648010000001" green="0.62352943419999995" blue="0.16862745579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="resolvedNAWithSender:" destination="9YC-3m-bwm" eventType="touchUpInside" id="VX8-TX-n3X"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Not Applicable" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzL-bk-2zE">
                                 <rect key="frame" x="238" y="369" width="121" height="30"/>
@@ -1767,11 +1822,12 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTf-OV-yDz">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTf-OV-yDz">
                                 <rect key="frame" x="16" y="372" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.34117648010000001" green="0.62352943419999995" blue="0.16862745579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="resolvedUnknownWithSender:" destination="9YC-3m-bwm" eventType="touchUpInside" id="gCd-IY-F2G"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unknown" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAp-K3-qNv">
                                 <rect key="frame" x="54" y="369" width="121" height="30"/>
@@ -1783,6 +1839,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="resolvedNA" destination="ruR-D5-epc" id="Wp3-Xz-Z18"/>
+                        <outlet property="resolvedNo" destination="cbx-rD-Z2x" id="OHH-w3-cez"/>
+                        <outlet property="resolvedUnknown" destination="ZTf-OV-yDz" id="17Y-10-wgx"/>
+                        <outlet property="resolvedYes" destination="Hnt-hI-r9Y" id="3sb-pI-tYt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NEy-H1-PR8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1796,14 +1858,14 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="APg-Nn-iqv"/>
-        <segue reference="0sh-X7-UIn"/>
+        <segue reference="UhQ-Gh-viv"/>
         <segue reference="3vB-eI-5mE"/>
-        <segue reference="d21-Id-9fY"/>
-        <segue reference="Df5-k5-fq0"/>
-        <segue reference="97E-AL-Pf3"/>
-        <segue reference="Zjr-DE-m7r"/>
-        <segue reference="fnV-yk-3B6"/>
+        <segue reference="SKv-Ne-wO3"/>
+        <segue reference="M70-lt-dKp"/>
+        <segue reference="EJn-wI-mFO"/>
+        <segue reference="Jpc-6P-dIH"/>
         <segue reference="Ni0-kz-F9n"/>
         <segue reference="9f5-5I-vwM"/>
+        <segue reference="wEe-Ey-Zwu"/>
     </inferredMetricsTieBreakers>
 </document>
