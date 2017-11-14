@@ -30,7 +30,7 @@
         <!--Login-->
         <scene sceneID="05k-dz-CSm">
             <objects>
-                <viewController title="Login" id="aBA-FN-r6F" sceneMemberID="viewController">
+                <viewController title="Login" id="aBA-FN-r6F" customClass="LoginViewController" customModule="SureSafety" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cNh-vY-9bU"/>
                         <viewControllerLayoutGuide type="bottom" id="jjM-5v-JP8"/>
@@ -81,12 +81,17 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
+                                    <action selector="authUserWithSender:" destination="aBA-FN-r6F" eventType="touchUpInside" id="GSg-dj-WJT"/>
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="fnV-yk-3B6"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="passBox" destination="mlf-KQ-cf5" id="izh-O3-v9p"/>
+                        <outlet property="userBox" destination="veT-1T-1yk" id="y4o-F8-6Pv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MPb-2P-T6J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1857,15 +1862,15 @@
         <image name="viewControllerBackgroundOnset.png" width="500" height="750"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="APg-Nn-iqv"/>
-        <segue reference="UhQ-Gh-viv"/>
-        <segue reference="3vB-eI-5mE"/>
-        <segue reference="SKv-Ne-wO3"/>
-        <segue reference="M70-lt-dKp"/>
         <segue reference="EJn-wI-mFO"/>
-        <segue reference="Jpc-6P-dIH"/>
+        <segue reference="M70-lt-dKp"/>
+        <segue reference="SKv-Ne-wO3"/>
         <segue reference="Ni0-kz-F9n"/>
         <segue reference="9f5-5I-vwM"/>
         <segue reference="wEe-Ey-Zwu"/>
+        <segue reference="APg-Nn-iqv"/>
+        <segue reference="UhQ-Gh-viv"/>
+        <segue reference="3vB-eI-5mE"/>
+        <segue reference="fnV-yk-3B6"/>
     </inferredMetricsTieBreakers>
 </document>

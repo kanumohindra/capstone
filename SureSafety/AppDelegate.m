@@ -7,17 +7,116 @@
 //
 
 #import "AppDelegate.h"
+#import <sqlite3.h>
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
+@synthesize databaseName, databasePath, people;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.people = [NSMutableArray array];
+    self.databaseName = @"SureSafety.db";
+    
+    NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDir = [documentPaths objectAtIndex:0];
+    
+    self.databasePath = [documentsDir stringByAppendingPathComponent:self.databaseName];
+    
+    [self checkAndCreateDatabase];
+    [self readDataFromDatabase];
+    
     return YES;
+}
+
+-(BOOL)insertIntoDatabase:(LoginData *)person
+{
+    sqlite3 *database;
+    BOOL returnCode = YES;
+    
+    if(sqlite3_open([self.databasePath UTF8String], &database) == SQLITE_OK)
+    {
+        char *sqlStatement = "insert into Login values(?, ?);";
+        sqlite3_stmt *compiledStatement;
+        
+        if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK)
+        {
+            sqlite3_bind_text(compiledStatement, 1, [person.username UTF8String], -1, SQLITE_TRANSIENT);
+            sqlite3_bind_text(compiledStatement, 2, [person.password UTF8String], -1, SQLITE_TRANSIENT);
+        }
+        else
+        {
+            returnCode = NO;
+        }
+        
+        if(sqlite3_step(compiledStatement) != SQLITE_DONE)
+        {
+            NSLog(@"Error: %s", sqlite3_errmsg(database));
+            returnCode = NO;
+        }
+        else
+        {
+            NSLog(@"Insert into row id = %lld", sqlite3_last_insert_rowid(database));
+        }
+        sqlite3_finalize(compiledStatement);
+    }
+    else
+    {
+        returnCode = NO;
+    }
+    
+    sqlite3_close(database);
+    return returnCode;
+}
+
+-(void)readDataFromDatabase
+{
+    [self.people removeAllObjects];
+    
+    sqlite3 *database;
+    
+    if(sqlite3_open([self.databasePath UTF8String], &database) == SQLITE_OK)
+    {
+        char *sqlStatement = "select * from Login;";
+        sqlite3_stmt *compiledStatement;
+        
+        if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK)
+        {
+            while(sqlite3_step(compiledStatement) == SQLITE_ROW)
+            {
+                char *u = (char *)sqlite3_column_text(compiledStatement, 1);
+                NSString *username = [NSString stringWithUTF8String:u];
+                
+                char *p = (char *)sqlite3_column_text(compiledStatement, 2);
+                NSString *password = [NSString stringWithUTF8String:p];
+                
+                LoginData *data = [[LoginData alloc] initWithData:username thePassword:password];
+                [self.people addObject:data];
+            }
+        }
+        sqlite3_finalize(compiledStatement);
+    }
+    sqlite3_close(database);
+}
+
+-(void)checkAndCreateDatabase
+{
+    BOOL success;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    success = [fileManager fileExistsAtPath:self.databasePath];
+    
+    if(success) return;
+    
+    NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:self.databaseName];
+    
+    [fileManager copyItemAtPath:databasePathFromApp toPath:self.databasePath error:nil];
+    
+    return;
 }
 
 

@@ -68,7 +68,7 @@ class OnSetOfIncidentViewController: UIViewController {
         
         let hour = calendar.component(.hour, from: date)
         let minute = calendar.component(.minute, from: date)
-        let seconds = calendar.component(.second, from: date)
+        //let seconds = calendar.component(.second, from: date)
         
         
         

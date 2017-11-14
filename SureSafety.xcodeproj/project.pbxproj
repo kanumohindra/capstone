@@ -20,6 +20,11 @@
 		AE51FB3D1FAA51BD005D535C /* HazardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51FB3C1FAA51BD005D535C /* HazardDetailsViewController.swift */; };
 		AE51FB3F1FAA5748005D535C /* HazardOnset1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51FB3E1FAA5748005D535C /* HazardOnset1ViewController.swift */; };
 		AE51FB411FAA5756005D535C /* HazardOnset2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51FB401FAA5756005D535C /* HazardOnset2ViewController.swift */; };
+		AE51FB441FBB98C0005D535C /* LoginData.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51FB431FBB98C0005D535C /* LoginData.m */; };
+		AE51FB481FBB99F2005D535C /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE51FB461FBB99F2005D535C /* libsqlite3.0.tbd */; };
+		AE51FB491FBB99F2005D535C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE51FB471FBB99F2005D535C /* libsqlite3.tbd */; };
+		AE51FB4C1FBB9ABD005D535C /* SureSafety.db in Resources */ = {isa = PBXBuildFile; fileRef = AE51FB4B1FBB9ABD005D535C /* SureSafety.db */; };
+		AE51FB4E1FBB9D34005D535C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51FB4D1FBB9D34005D535C /* LoginViewController.swift */; };
 		AE6547421F928E18005A6BB5 /* TableTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6547411F928E18005A6BB5 /* TableTestViewController.swift */; };
 		AE6547441F928FEB005A6BB5 /* SiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6547431F928FEB005A6BB5 /* SiteCell.swift */; };
 		AE78C5061F9D5FF10000DCA5 /* viewControllerBackgroundOnset.png in Resources */ = {isa = PBXBuildFile; fileRef = AE78C5051F9D5FF10000DCA5 /* viewControllerBackgroundOnset.png */; };
@@ -71,6 +76,12 @@
 		AE51FB3C1FAA51BD005D535C /* HazardDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HazardDetailsViewController.swift; sourceTree = "<group>"; };
 		AE51FB3E1FAA5748005D535C /* HazardOnset1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HazardOnset1ViewController.swift; sourceTree = "<group>"; };
 		AE51FB401FAA5756005D535C /* HazardOnset2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HazardOnset2ViewController.swift; sourceTree = "<group>"; };
+		AE51FB421FBB98C0005D535C /* LoginData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginData.h; sourceTree = "<group>"; };
+		AE51FB431FBB98C0005D535C /* LoginData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginData.m; sourceTree = "<group>"; };
+		AE51FB461FBB99F2005D535C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		AE51FB471FBB99F2005D535C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		AE51FB4B1FBB9ABD005D535C /* SureSafety.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = SureSafety.db; path = ../../../SureSafety.db; sourceTree = "<group>"; };
+		AE51FB4D1FBB9D34005D535C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AE6547401F928E18005A6BB5 /* SureSafety-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SureSafety-Bridging-Header.h"; sourceTree = "<group>"; };
 		AE6547411F928E18005A6BB5 /* TableTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableTestViewController.swift; sourceTree = "<group>"; };
 		AE6547431F928FEB005A6BB5 /* SiteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiteCell.swift; sourceTree = "<group>"; };
@@ -105,6 +116,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE51FB481FBB99F2005D535C /* libsqlite3.0.tbd in Frameworks */,
+				AE51FB491FBB99F2005D535C /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +148,7 @@
 				AE6547431F928FEB005A6BB5 /* SiteCell.swift */,
 				AEEFEEB01F8D003A00C09797 /* ViewController.h */,
 				AEEFEEB11F8D003A00C09797 /* ViewController.m */,
+				AE51FB4D1FBB9D34005D535C /* LoginViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -173,6 +187,23 @@
 			name = "Hazard Observed";
 			sourceTree = "<group>";
 		};
+		AE51FB451FBB99F1005D535C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE51FB461FBB99F2005D535C /* libsqlite3.0.tbd */,
+				AE51FB471FBB99F2005D535C /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE51FB4A1FBB9A7D005D535C /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				AE51FB4B1FBB9ABD005D535C /* SureSafety.db */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
 		AEEFEE9E1F8D003A00C09797 = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +211,7 @@
 				AEEFEEC31F8D003B00C09797 /* SureSafetyTests */,
 				AEEFEECE1F8D003B00C09797 /* SureSafetyUITests */,
 				AEEFEEA81F8D003A00C09797 /* Products */,
+				AE51FB451FBB99F1005D535C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -209,9 +241,12 @@
 		AEEFEEAA1F8D003A00C09797 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AE51FB4A1FBB9A7D005D535C /* Database */,
 				AEEFEEAD1F8D003A00C09797 /* AppDelegate.h */,
 				AEEFEEAE1F8D003A00C09797 /* AppDelegate.m */,
 				AEEFEEAB1F8D003A00C09797 /* main.m */,
+				AE51FB421FBB98C0005D535C /* LoginData.h */,
+				AE51FB431FBB98C0005D535C /* LoginData.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -360,6 +395,7 @@
 			files = (
 				AEEFEEDF1F8D961E00C09797 /* footerImage.png in Resources */,
 				AEEFEEBA1F8D003B00C09797 /* LaunchScreen.storyboard in Resources */,
+				AE51FB4C1FBB9ABD005D535C /* SureSafety.db in Resources */,
 				AE51FB381FAA4D52005D535C /* checkbox-checked.png in Resources */,
 				AEF6E28B1F9025EF00AE3937 /* loginHeader.jpg in Resources */,
 				AE51FB3B1FAA4DE4005D535C /* unchecked.png in Resources */,
@@ -395,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE51FB4E1FBB9D34005D535C /* LoginViewController.swift in Sources */,
 				AE51FB291FAA38DA005D535C /* IncidentReporting4ViewController.swift in Sources */,
 				AEEFEEB21F8D003B00C09797 /* ViewController.m in Sources */,
 				AEEFEEAF1F8D003A00C09797 /* AppDelegate.m in Sources */,
@@ -410,6 +447,7 @@
 				AE51FB311FAA4C85005D535C /* HazardProfileViewController.swift in Sources */,
 				AE51FB3F1FAA5748005D535C /* HazardOnset1ViewController.swift in Sources */,
 				AE51FB411FAA5756005D535C /* HazardOnset2ViewController.swift in Sources */,
+				AE51FB441FBB98C0005D535C /* LoginData.m in Sources */,
 				AE51FB231FA13FAF005D535C /* IncidentReporting1ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
