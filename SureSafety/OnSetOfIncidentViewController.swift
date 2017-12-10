@@ -167,6 +167,16 @@ class OnSetOfIncidentViewController: UIViewController {
         
         gradEndDate.text = somedateString
     }
+    
+    @IBAction func saveInfo()
+    {
+        let instanceofGlobalArray: GlobalArray = GlobalArray()
+        
+        instanceofGlobalArray.incOnsetArray.append(suddenDateBox.text!)
+        instanceofGlobalArray.incOnsetArray.append(suddenTimeBox.text!)
+        instanceofGlobalArray.incOnsetArray.append(gradStartDate.text!)
+        instanceofGlobalArray.incOnsetArray.append(gradEndDate.text!)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

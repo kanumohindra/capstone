@@ -9,6 +9,19 @@
 import UIKit
 
 class HazardOnset1ViewController: UIViewController {
+    
+    @IBOutlet var view1: UITextView!
+    @IBOutlet var view2: UITextView!
+    @IBOutlet var txt1: UITextField!
+    
+    @IBAction func saveInfo()
+    {
+        let instanceOfGlobalArray: GlobalArray = GlobalArray()
+        
+        instanceOfGlobalArray.hazOnset.append(view1.text!)
+        instanceOfGlobalArray.hazOnset.append(view2.text!)
+        instanceOfGlobalArray.hazOnset.append(txt1.text!)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

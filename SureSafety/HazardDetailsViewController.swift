@@ -21,6 +21,16 @@ class HazardDetailsViewController: UIViewController {
     @IBOutlet var txtOffSite: UITextField!
     
     @IBOutlet var datePicker: UIDatePicker!
+    
+    @IBAction func saveInfo()
+    {
+        let instanceOfGlobalArray: GlobalArray = GlobalArray()
+        
+        instanceOfGlobalArray.hazDetails.append(txtDate.text!)
+        instanceOfGlobalArray.hazDetails.append(txtTime.text!)
+        instanceOfGlobalArray.hazDetails.append(txtWorkSite.text!)
+        instanceOfGlobalArray.hazDetails.append(txtOffSite.text!)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

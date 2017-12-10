@@ -81,8 +81,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
-                                    <action selector="authUserWithSender:" destination="aBA-FN-r6F" eventType="touchUpInside" id="GSg-dj-WJT"/>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="fnV-yk-3B6"/>
+                                    <action selector="authUserWithSender:" destination="aBA-FN-r6F" eventType="touchUpInside" id="kJZ-nZ-I1b"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -91,6 +90,7 @@
                     <connections>
                         <outlet property="passBox" destination="mlf-KQ-cf5" id="izh-O3-v9p"/>
                         <outlet property="userBox" destination="veT-1T-1yk" id="y4o-F8-6Pv"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="AuthSeg" id="YRu-t3-DZe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MPb-2P-T6J" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -278,17 +278,19 @@
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                 <state key="normal" title="Next Page"/>
                                 <connections>
+                                    <action selector="saveInfo" destination="QPG-4r-UXV" eventType="touchUpInside" id="sPR-yt-czc"/>
                                     <segue destination="eyi-jR-zLK" kind="presentation" id="UhQ-Gh-viv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uum-lJ-blI">
-                                <rect key="frame" x="16" y="605" width="120" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
-                                <state key="normal" title="Save Draft"/>
-                            </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="department" destination="WDL-JQ-vMl" id="96P-o8-F1x"/>
+                        <outlet property="employeeID" destination="Qp8-zU-wjM" id="5Lm-NZ-SIM"/>
+                        <outlet property="firstName" destination="QEW-2k-5PC" id="ZsQ-3f-b2s"/>
+                        <outlet property="lastName" destination="b2z-IP-YJd" id="p9C-Pj-vpj"/>
+                        <outlet property="supervisor" destination="e5V-IP-RiG" id="DTP-sE-gLS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2aL-wq-dTk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -424,6 +426,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                 <state key="normal" title="Next Page"/>
                                 <connections>
+                                    <action selector="saveInfo" destination="eyi-jR-zLK" eventType="touchUpInside" id="M2Q-ts-ega"/>
                                     <segue destination="S3F-1t-MK7" kind="presentation" id="3vB-eI-5mE"/>
                                 </connections>
                             </button>
@@ -477,7 +480,7 @@
         <!--Incident Reporting 3-->
         <scene sceneID="o5d-Zt-UWP">
             <objects>
-                <viewController title="Incident Reporting 3" id="CUL-Rf-qpy" sceneMemberID="viewController">
+                <viewController title="Incident Reporting 3" id="CUL-Rf-qpy" customClass="IncidentReporting3ViewController" customModule="SureSafety" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="H9S-Nr-Lza"/>
                         <viewControllerLayoutGuide type="bottom" id="b0W-DO-NsS"/>
@@ -509,6 +512,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                 <state key="normal" title="Next Page"/>
                                 <connections>
+                                    <action selector="saveInfo" destination="CUL-Rf-qpy" eventType="touchUpInside" id="MTv-ab-fP1"/>
                                     <segue destination="aYt-jK-TJt" kind="presentation" id="suT-yU-e0p"/>
                                 </connections>
                             </button>
@@ -600,6 +604,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="EID-bR-Eqj" id="M4l-gw-eTv"/>
+                        <outlet property="name" destination="1oS-so-iJw" id="NWk-Ke-rZ1"/>
+                        <outlet property="phone" destination="syr-cY-1Jd" id="kPG-Bz-hj3"/>
+                        <outlet property="view1" destination="MRn-Yy-dCU" id="ZRb-ie-l69"/>
+                        <outlet property="view2" destination="jc0-Ke-1t7" id="lXx-Fa-fgB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YpU-LA-YQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -707,6 +718,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                 <state key="normal" title="Next Page"/>
                                 <connections>
+                                    <action selector="saveInfo" destination="S3F-1t-MK7" eventType="touchUpInside" id="atC-eK-yU3"/>
                                     <segue destination="zZM-DK-P7w" kind="presentation" id="d21-Id-9fY"/>
                                 </connections>
                             </button>
@@ -735,6 +747,8 @@
                     <connections>
                         <outlet property="dateBox" destination="Usx-zC-9YS" id="hyz-hC-o0f"/>
                         <outlet property="datePicker" destination="9pa-WG-VHY" id="ZlN-PM-lMV"/>
+                        <outlet property="location" destination="bs3-kd-LwJ" id="9SN-8y-1FR"/>
+                        <outlet property="reportedTo" destination="8q1-K1-Et5" id="EG7-M5-rgA"/>
                         <outlet property="timeBox" destination="9jV-yZ-HkN" id="jch-dT-juw"/>
                     </connections>
                 </viewController>
@@ -745,7 +759,7 @@
         <!--Incident Reporting 2-->
         <scene sceneID="nKQ-hG-Lik">
             <objects>
-                <viewController title="Incident Reporting 2" id="zZM-DK-P7w" sceneMemberID="viewController">
+                <viewController title="Incident Reporting 2" id="zZM-DK-P7w" customClass="IncidentReporting2ViewController" customModule="SureSafety" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kqH-Yr-ZMo"/>
                         <viewControllerLayoutGuide type="bottom" id="mTO-lC-N8Q"/>
@@ -928,6 +942,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                 <state key="normal" title="Next Page"/>
                                 <connections>
+                                    <action selector="saveInfo" destination="aYt-jK-TJt" eventType="touchUpInside" id="z3O-YH-eH8"/>
                                     <segue destination="dnD-AT-7lg" kind="presentation" id="zpT-gL-ir6"/>
                                 </connections>
                             </button>
@@ -1088,6 +1103,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="saveInfo" destination="dnD-AT-7lg" eventType="touchUpInside" id="viB-pR-F8x"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Medical Treatment?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L96-TQ-h29">
                                 <rect key="frame" x="18" y="87" width="218" height="42"/>
@@ -1215,6 +1233,8 @@
                         <outlet property="medNo" destination="WSM-Wq-TQQ" id="b7L-uR-lPt"/>
                         <outlet property="medUnknown" destination="Ddx-rD-cua" id="Pn1-Cn-AvQ"/>
                         <outlet property="medYes" destination="rPh-WB-vrB" id="3kp-y9-Cwv"/>
+                        <outlet property="txtFac" destination="70n-et-3i0" id="h6a-XW-o2n"/>
+                        <outlet property="txtPrac" destination="ba5-Cj-38U" id="9Lu-PK-DlU"/>
                         <outlet property="txtTreatedOn" destination="adM-Ba-01p" id="7AY-6S-2aL"/>
                     </connections>
                 </viewController>
@@ -1435,12 +1455,20 @@
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                 <state key="normal" title="Next Page"/>
                                 <connections>
+                                    <action selector="saveInfo" destination="0uK-aH-mUh" eventType="touchUpInside" id="640-zp-rua"/>
                                     <segue destination="A3n-u4-mlu" kind="presentation" id="97E-AL-Pf3"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="department" destination="7NU-Lt-OUB" id="VZ2-2p-1Wv"/>
+                        <outlet property="employeeID" destination="P6w-di-P3y" id="mY2-Sw-mR7"/>
+                        <outlet property="firstName" destination="Uaa-zc-jn3" id="tOh-1F-yMN"/>
+                        <outlet property="lastName" destination="yIq-uc-ay6" id="IhD-Ir-jNT"/>
+                        <outlet property="supervisor" destination="7mw-1T-Q8X" id="Pnd-w4-WQh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i7i-d8-hxS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1541,6 +1569,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                 <state key="normal" title="Next Page"/>
                                 <connections>
+                                    <action selector="saveInfo" destination="A3n-u4-mlu" eventType="touchUpInside" id="vbF-ST-4eJ"/>
                                     <segue destination="ZWE-Zy-Z4K" kind="presentation" id="Df5-k5-fq0"/>
                                 </connections>
                             </button>
@@ -1698,6 +1727,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                 <state key="normal" title="Next Page"/>
                                 <connections>
+                                    <action selector="saveInfo" destination="ZWE-Zy-Z4K" eventType="touchUpInside" id="Np5-1H-heX"/>
                                     <segue destination="9YC-3m-bwm" kind="presentation" id="HdX-5B-gFb"/>
                                 </connections>
                             </button>
@@ -1723,6 +1753,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="txt1" destination="qXp-LX-1dV" id="oNP-jh-kfV"/>
+                        <outlet property="view1" destination="LAB-ui-ZUq" id="NrG-Ga-U9v"/>
+                        <outlet property="view2" destination="ZC1-CD-1bU" id="WwZ-iw-l9t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rhg-Vi-CHW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1777,6 +1812,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="saveInfo" destination="9YC-3m-bwm" eventType="touchUpInside" id="HQQ-2Y-tlA"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hazardous Condition Resolved:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eC-9Z-SKk">
                                 <rect key="frame" x="12" y="268" width="243" height="42"/>
@@ -1849,6 +1887,7 @@
                         <outlet property="resolvedNo" destination="cbx-rD-Z2x" id="OHH-w3-cez"/>
                         <outlet property="resolvedUnknown" destination="ZTf-OV-yDz" id="17Y-10-wgx"/>
                         <outlet property="resolvedYes" destination="Hnt-hI-r9Y" id="3sb-pI-tYt"/>
+                        <outlet property="view1" destination="FZz-jz-ZAt" id="Jfw-Uj-p1g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NEy-H1-PR8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1862,15 +1901,15 @@
         <image name="viewControllerBackgroundOnset.png" width="500" height="750"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EJn-wI-mFO"/>
-        <segue reference="M70-lt-dKp"/>
-        <segue reference="SKv-Ne-wO3"/>
         <segue reference="Ni0-kz-F9n"/>
         <segue reference="9f5-5I-vwM"/>
         <segue reference="wEe-Ey-Zwu"/>
+        <segue reference="Bnu-qj-vIq"/>
+        <segue reference="EJn-wI-mFO"/>
+        <segue reference="M70-lt-dKp"/>
+        <segue reference="SKv-Ne-wO3"/>
         <segue reference="APg-Nn-iqv"/>
         <segue reference="UhQ-Gh-viv"/>
-        <segue reference="3vB-eI-5mE"/>
-        <segue reference="fnV-yk-3B6"/>
+        <segue reference="bHL-YQ-JcL"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -14,6 +14,15 @@ class HazardOnset2ViewController: UIViewController {
     @IBOutlet var resolvedNo: UIButton!
     @IBOutlet var resolvedUnknown: UIButton!
     @IBOutlet var resolvedNA: UIButton!
+    
+    @IBOutlet var view1: UITextView!
+    
+    @IBAction func saveInfo()
+    {
+        let instanceOfGlobalArray: GlobalArray = GlobalArray()
+        
+        instanceOfGlobalArray.hazOnset2.append(view1.text!)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

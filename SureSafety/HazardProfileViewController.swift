@@ -9,6 +9,23 @@
 import UIKit
 
 class HazardProfileViewController: UIViewController {
+    
+    @IBOutlet var firstName: UITextField!
+    @IBOutlet var lastName: UITextField!
+    @IBOutlet var employeeID: UITextField!
+    @IBOutlet var department: UITextField!
+    @IBOutlet var supervisor: UITextField!
+    
+    @IBAction func saveInfo()
+    {
+        let instanceOfGlobalArray: GlobalArray = GlobalArray()
+        
+        instanceOfGlobalArray.hazProfileArray.append(firstName.text!)
+        instanceOfGlobalArray.hazProfileArray.append(lastName.text!)
+        instanceOfGlobalArray.hazProfileArray.append(employeeID.text!)
+        instanceOfGlobalArray.hazProfileArray.append(department.text!)
+        instanceOfGlobalArray.hazProfileArray.append(supervisor.text!)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

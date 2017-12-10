@@ -13,6 +13,9 @@ class IncidentReporting1ViewController: UIViewController {
     @IBOutlet var dateBox: UITextField!
     @IBOutlet var timeBox: UITextField!
     @IBOutlet var datePicker: UIDatePicker!
+    
+    @IBOutlet var reportedTo: UITextField!
+    @IBOutlet var location: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +50,16 @@ class IncidentReporting1ViewController: UIViewController {
         timeBox.text = String(hour) + ":" + String(minute)
         
         
+    }
+    
+    @IBAction func saveInfo()
+    {
+        let instanceOfGlobalArray: GlobalArray = GlobalArray()
+        
+        instanceOfGlobalArray.incReporting1.append(dateBox.text!)
+        instanceOfGlobalArray.incReporting1.append(timeBox.text!)
+        instanceOfGlobalArray.incReporting1.append(reportedTo.text!)
+        instanceOfGlobalArray.incReporting1.append(location.text!)
     }
     
 

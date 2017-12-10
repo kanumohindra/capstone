@@ -23,6 +23,17 @@ class IncidentReporting4ViewController: UIViewController {
     
     @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var datePicker2: UIDatePicker!
+    
+    @IBAction func saveInfo()
+    {
+        let instanceOfGlobalArray: GlobalArray = GlobalArray()
+        
+        instanceOfGlobalArray.incReporting4.append(txtDate.text!)
+        instanceOfGlobalArray.incReporting4.append(txtName.text!)
+        instanceOfGlobalArray.incReporting4.append(txtPosition.text!)
+        instanceOfGlobalArray.incReporting4.append(txtDayOff.text!)
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

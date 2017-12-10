@@ -16,7 +16,20 @@ class IncidentReporting5ViewController: UIViewController {
     
     @IBOutlet var txtTreatedOn: UITextField!
     
+    @IBOutlet var txtFac: UITextField!
+    
+    @IBOutlet var txtPrac: UITextField!
+    
     @IBOutlet var datePicker: UIDatePicker!
+    
+    @IBAction func saveInfo()
+    {
+        let instanceOfGlobalArray: GlobalArray = GlobalArray()
+        
+        instanceOfGlobalArray.incReporting5.append(txtTreatedOn.text!)
+        instanceOfGlobalArray.incReporting5.append(txtFac.text!)
+        instanceOfGlobalArray.incReporting5.append(txtPrac.text!)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

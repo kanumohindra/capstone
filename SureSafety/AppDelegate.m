@@ -88,14 +88,15 @@
         {
             while(sqlite3_step(compiledStatement) == SQLITE_ROW)
             {
-                char *u = (char *)sqlite3_column_text(compiledStatement, 1);
+                char *u = (char *)sqlite3_column_text(compiledStatement, 0);
                 NSString *username = [NSString stringWithUTF8String:u];
                 
-                char *p = (char *)sqlite3_column_text(compiledStatement, 2);
+                char *p = (char *)sqlite3_column_text(compiledStatement, 1);
                 NSString *password = [NSString stringWithUTF8String:p];
                 
                 LoginData *data = [[LoginData alloc] initWithData:username thePassword:password];
                 [self.people addObject:data];
+                
             }
         }
         sqlite3_finalize(compiledStatement);

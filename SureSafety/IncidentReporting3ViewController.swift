@@ -9,6 +9,12 @@
 import UIKit
 
 class IncidentReporting3ViewController: UIViewController {
+    
+    @IBOutlet var view1: UITextView!
+    @IBOutlet var view2: UITextView!
+    @IBOutlet var name: UITextField!
+    @IBOutlet var phone: UITextField!
+    @IBOutlet var email: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +25,17 @@ class IncidentReporting3ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func saveInfo()
+    {
+        let instanceOfGlobalArray: GlobalArray = GlobalArray()
+        
+        instanceOfGlobalArray.incReporting3.append(view1.text!)
+        instanceOfGlobalArray.incReporting3.append(view2.text!)
+        instanceOfGlobalArray.incReporting3.append(name.text!)
+        instanceOfGlobalArray.incReporting3.append(phone.text!)
+        instanceOfGlobalArray.incReporting3.append(email.text!)
     }
     
 
