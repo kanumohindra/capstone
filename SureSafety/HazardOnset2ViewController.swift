@@ -15,7 +15,23 @@ class HazardOnset2ViewController: UIViewController {
     @IBOutlet var resolvedUnknown: UIButton!
     @IBOutlet var resolvedNA: UIButton!
     
+    @IBOutlet var submit: UIButton!
+    
     @IBOutlet var view1: UITextView!
+    
+    @IBAction func submitHaz()
+    {
+        let alert = UIAlertController(title: "Thank You", message: "Form submitted.", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    func performSegueHaz()
+    {
+        performSegue(withIdentifier: "formSubmitHaz", sender: UIButton())
+    }
+
     
     @IBAction func saveInfo()
     {

@@ -14,6 +14,11 @@ class IncidentReporting5ViewController: UIViewController {
     @IBOutlet var medNo: UIButton!
     @IBOutlet var medUnknown: UIButton!
     
+    @IBOutlet var medical: UIButton!
+    @IBOutlet var hospital: UIButton!
+    
+    @IBOutlet var submit: UIButton!
+    
     @IBOutlet var txtTreatedOn: UITextField!
     
     @IBOutlet var txtFac: UITextField!
@@ -21,6 +26,29 @@ class IncidentReporting5ViewController: UIViewController {
     @IBOutlet var txtPrac: UITextField!
     
     @IBOutlet var datePicker: UIDatePicker!
+    
+    @IBAction func submitInc()
+    {
+        let alert = UIAlertController(title: "Thank You", message: "Form submitted.", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    func performSegueInc()
+    {
+        performSegue(withIdentifier: "formSubmit", sender: UIButton())
+    }
+    
+    @IBAction func medicalClicked()
+    {
+        txtFac.text = "Medical Clinic"
+    }
+    
+    @IBAction func hospitalClicked()
+    {
+        txtFac.text = "Hospital"
+    }
     
     @IBAction func saveInfo()
     {

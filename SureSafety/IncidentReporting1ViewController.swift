@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IncidentReporting1ViewController: UIViewController {
+class IncidentReporting1ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet var dateBox: UITextField!
     @IBOutlet var timeBox: UITextField!
@@ -16,7 +16,46 @@ class IncidentReporting1ViewController: UIViewController {
     
     @IBOutlet var reportedTo: UITextField!
     @IBOutlet var location: UITextField!
-
+    @IBOutlet var expTxt: UITextField!
+    
+    @IBOutlet var myTableView: UITableView!
+    
+    var exposures = ["Agression", "Assault", "Client Behaviour", "Environmental Condition", "Fall", "Fire/Explosion", "Harmful Substances", "Keyboarding", "Lift/Transfer - Object", "Lift/Transfer - Person", "Motor Vehicle Accident", "Needle Stick", "Other", "Overexertion", "Push/Pull", "Repetition", "Slip/Trip", "Stress - Cumulative", "Stress - Traumatic", "Struck By Person/Client - Intentional", "Struck By Person/Client - Unintentional", "Struck/Caught - By Object"]
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let tableCell : SiteCell = tableView.dequeueReusableCell(withIdentifier: "cell") as? SiteCell
+            ?? SiteCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+        
+        let exposure = exposures[indexPath.row]
+        tableCell.departmentName.text = exposure
+        
+        return tableCell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return exposures.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 30
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        let currentCell = myTableView.cellForRow(at: indexPath) as! SiteCell
+        expTxt.text?.append(currentCell.departmentName.text! + ", ")
+        
+        /*myTableView.dataSource = nil
+         myTableView.delegate = nil
+         
+         myTableView.isHidden = true*/
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

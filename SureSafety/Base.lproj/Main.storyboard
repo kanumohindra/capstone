@@ -258,19 +258,11 @@
                                 <rect key="frame" x="133" y="297" width="225" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="fZM-Dg-fFl" id="doK-ov-Q7f"/>
-                                    <outlet property="delegate" destination="fZM-Dg-fFl" id="Nv2-wD-LwZ"/>
-                                </connections>
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cc5-7W-eIK">
                                 <rect key="frame" x="133" y="462" width="226" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="fZM-Dg-fFl" id="BUX-Ch-oRO"/>
-                                    <outlet property="delegate" destination="fZM-Dg-fFl" id="twZ-S4-Xii"/>
-                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSN-B1-Ldj">
                                 <rect key="frame" x="238" y="605" width="120" height="42"/>
@@ -713,7 +705,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7IV-ts-u4o">
-                                <rect key="frame" x="235" y="605" width="120" height="42"/>
+                                <rect key="frame" x="237" y="617" width="120" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                 <state key="normal" title="Next Page"/>
@@ -729,11 +721,6 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJc-ag-1XW">
-                                <rect key="frame" x="249" y="567" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="More"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q89-Zp-bu6">
                                 <rect key="frame" x="14" y="374" width="109" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -741,13 +728,31 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sNc-06-D9z">
+                                <rect key="frame" x="16" y="498" width="339" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="S3F-1t-MK7" id="VWz-cY-pJm"/>
+                                    <outlet property="delegate" destination="S3F-1t-MK7" id="LlQ-nZ-Kwm"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Events or Exposures" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Le7-sL-XQr">
+                                <rect key="frame" x="16" y="460" width="332" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="dateBox" destination="Usx-zC-9YS" id="hyz-hC-o0f"/>
                         <outlet property="datePicker" destination="9pa-WG-VHY" id="ZlN-PM-lMV"/>
+                        <outlet property="expTxt" destination="Le7-sL-XQr" id="j3P-mq-f87"/>
                         <outlet property="location" destination="bs3-kd-LwJ" id="9SN-8y-1FR"/>
+                        <outlet property="myTableView" destination="sNc-06-D9z" id="lNn-GZ-pQR"/>
                         <outlet property="reportedTo" destination="8q1-K1-Et5" id="EG7-M5-rgA"/>
                         <outlet property="timeBox" destination="9jV-yZ-HkN" id="jch-dT-juw"/>
                     </connections>
@@ -1105,6 +1110,8 @@
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="saveInfo" destination="dnD-AT-7lg" eventType="touchUpInside" id="viB-pR-F8x"/>
+                                    <action selector="submit" destination="dnD-AT-7lg" eventType="touchUpInside" id="C1d-3R-ziL"/>
+                                    <action selector="submitInc" destination="dnD-AT-7lg" eventType="touchUpInside" id="Ccq-la-iQF"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Medical Treatment?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L96-TQ-h29">
@@ -1218,21 +1225,29 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <state key="normal" title="Medical Clinic"/>
+                                <connections>
+                                    <action selector="medicalClicked" destination="dnD-AT-7lg" eventType="touchUpInside" id="Sff-k2-AMh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJz-Vx-91R">
                                 <rect key="frame" x="254" y="373" width="103" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <state key="normal" title="Hospital"/>
+                                <connections>
+                                    <action selector="hospitalClicked" destination="dnD-AT-7lg" eventType="touchUpInside" id="iea-BI-zPb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="datePicker" destination="aWC-3z-EWm" id="L8S-y1-ihf"/>
+                        <outlet property="hospital" destination="eJz-Vx-91R" id="wsl-Ay-h4B"/>
                         <outlet property="medNo" destination="WSM-Wq-TQQ" id="b7L-uR-lPt"/>
                         <outlet property="medUnknown" destination="Ddx-rD-cua" id="Pn1-Cn-AvQ"/>
                         <outlet property="medYes" destination="rPh-WB-vrB" id="3kp-y9-Cwv"/>
+                        <outlet property="medical" destination="LZp-OR-d8b" id="UWL-UA-aNm"/>
                         <outlet property="txtFac" destination="70n-et-3i0" id="h6a-XW-o2n"/>
                         <outlet property="txtPrac" destination="ba5-Cj-38U" id="9Lu-PK-DlU"/>
                         <outlet property="txtTreatedOn" destination="adM-Ba-01p" id="7AY-6S-2aL"/>
@@ -1435,19 +1450,11 @@
                                 <rect key="frame" x="133" y="297" width="225" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="fZM-Dg-fFl" id="UdI-YZ-eGj"/>
-                                    <outlet property="delegate" destination="fZM-Dg-fFl" id="a83-1g-kKZ"/>
-                                </connections>
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kM4-Lb-INS">
                                 <rect key="frame" x="133" y="462" width="226" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="fZM-Dg-fFl" id="Gy7-yk-YY5"/>
-                                    <outlet property="delegate" destination="fZM-Dg-fFl" id="rbV-WW-ZtK"/>
-                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSq-pc-qvi">
                                 <rect key="frame" x="238" y="605" width="120" height="42"/>
@@ -1749,11 +1756,16 @@
                                 <rect key="frame" x="12" y="483" width="347" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZWE-Zy-Z4K" id="BkK-Xp-TRO"/>
+                                    <outlet property="delegate" destination="ZWE-Zy-Z4K" id="b52-zc-Qub"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="myTableView" destination="MlW-JS-5lT" id="WEv-2k-ccK"/>
                         <outlet property="txt1" destination="qXp-LX-1dV" id="oNP-jh-kfV"/>
                         <outlet property="view1" destination="LAB-ui-ZUq" id="NrG-Ga-U9v"/>
                         <outlet property="view2" destination="ZC1-CD-1bU" id="WwZ-iw-l9t"/>
@@ -1814,6 +1826,8 @@
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="saveInfo" destination="9YC-3m-bwm" eventType="touchUpInside" id="HQQ-2Y-tlA"/>
+                                    <action selector="submit" destination="9YC-3m-bwm" eventType="touchUpInside" id="EWM-f1-yHr"/>
+                                    <action selector="submitHaz" destination="9YC-3m-bwm" eventType="touchUpInside" id="qgg-zW-EVk"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hazardous Condition Resolved:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eC-9Z-SKk">
@@ -1903,13 +1917,13 @@
     <inferredMetricsTieBreakers>
         <segue reference="Ni0-kz-F9n"/>
         <segue reference="9f5-5I-vwM"/>
-        <segue reference="wEe-Ey-Zwu"/>
-        <segue reference="Bnu-qj-vIq"/>
         <segue reference="EJn-wI-mFO"/>
-        <segue reference="M70-lt-dKp"/>
-        <segue reference="SKv-Ne-wO3"/>
+        <segue reference="97E-AL-Pf3"/>
         <segue reference="APg-Nn-iqv"/>
         <segue reference="UhQ-Gh-viv"/>
         <segue reference="bHL-YQ-JcL"/>
+        <segue reference="SKv-Ne-wO3"/>
+        <segue reference="d21-Id-9fY"/>
+        <segue reference="Bnu-qj-vIq"/>
     </inferredMetricsTieBreakers>
 </document>
