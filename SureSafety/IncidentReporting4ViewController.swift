@@ -69,10 +69,11 @@ class IncidentReporting4ViewController: UIViewController {
             datePicker.isHidden = false
             txtName.isEnabled = true
             txtPosition.isEnabled = true
+            firstAidBoxNo.isEnabled = false
         }
         else
         {
-            
+            firstAidBoxNo.isEnabled = true
         }
     }
     
@@ -84,10 +85,11 @@ class IncidentReporting4ViewController: UIViewController {
             datePicker.isHidden = true
             txtName.isEnabled = false
             txtPosition.isEnabled = false
+            firstAidBoxYes.isEnabled = false
         }
         else
         {
-            
+            firstAidBoxYes.isEnabled = true
         }
     }
     
@@ -97,10 +99,13 @@ class IncidentReporting4ViewController: UIViewController {
         if sender.isSelected{
             txtDayOff.isEnabled = true
             datePicker2.isHidden = false
+            absenceBoxUnknown.isEnabled = false
+            absenceBoxNo.isEnabled = false
         }
         else
         {
-            
+            absenceBoxUnknown.isEnabled = true
+            absenceBoxNo.isEnabled = true
         }
     }
     
@@ -110,10 +115,13 @@ class IncidentReporting4ViewController: UIViewController {
         if sender.isSelected{
             txtDayOff.isEnabled = false
             datePicker2.isHidden = true
+            absenceBoxYes.isEnabled = false
+            absenceBoxUnknown.isEnabled = false
         }
         else
         {
-            
+            absenceBoxYes.isEnabled = true
+            absenceBoxUnknown.isEnabled = true
         }
     }
     
@@ -121,11 +129,14 @@ class IncidentReporting4ViewController: UIViewController {
         sender.isSelected = !sender.isSelected
         
         if sender.isSelected{
+            absenceBoxYes.isEnabled = false
+            absenceBoxNo.isEnabled = false
             
         }
         else
         {
-            
+            absenceBoxYes.isEnabled = true
+            absenceBoxNo.isEnabled = true
         }
     }
     

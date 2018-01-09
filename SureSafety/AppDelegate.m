@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    self.people = [NSMutableArray array];
+    /*self.people = [NSMutableArray array];
     self.databaseName = @"SureSafety.db";
     
     NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -28,7 +28,7 @@
     self.databasePath = [documentsDir stringByAppendingPathComponent:self.databaseName];
     
     [self checkAndCreateDatabase];
-    [self readDataFromDatabase];
+    [self readDataFromDatabase];*/
     
     return YES;
 }

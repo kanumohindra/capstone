@@ -27,12 +27,63 @@ class IncidentReporting5ViewController: UIViewController {
     
     @IBOutlet var datePicker: UIDatePicker!
     
+    func insertIntoDatabase()
+    {
+        /*let instanceOfGlobalArray: GlobalArray = GlobalArray()
+        
+        
+        let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            .appendingPathComponent("SureSafety.db")
+        
+        let insertStatementString = "INSERT INTO Login (username, password) VALUES (?, ?);"
+        
+        // open database
+        
+        var db: OpaquePointer?
+        if sqlite3_open(fileURL.path, &db) != SQLITE_OK {
+            print("error opening database")
+        }
+        
+        var insertStatement: OpaquePointer? = nil
+        
+        // 1
+        if sqlite3_prepare_v2(db, insertStatementString, -1, &insertStatement, nil) == SQLITE_OK {
+            let user: NSString = "lol"
+            let pass: NSString = "lol2"
+            
+            // 2
+            sqlite3_bind_text(insertStatement, 0, user.utf8String, -1, nil)
+            // 3
+            sqlite3_bind_text(insertStatement, 1, pass.utf8String, -1, nil)
+            
+            // 4
+            if sqlite3_step(insertStatement) == SQLITE_DONE {
+                print("Successfully inserted row.")
+            } else {
+                print("Could not insert row.")
+            }
+        } else {
+            print("INSERT statement could not be prepared.")
+        }
+        // 5
+        sqlite3_finalize(insertStatement)
+        
+        insertStatement = nil
+        
+        if sqlite3_close(db) != SQLITE_OK {
+            print("error closing database")
+        }
+        
+        db = nil*/
+    }
+    
     @IBAction func submitInc()
     {
         let alert = UIAlertController(title: "Thank You", message: "Form submitted.", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         
+        insertIntoDatabase()
     }
     
     func performSegueInc()
