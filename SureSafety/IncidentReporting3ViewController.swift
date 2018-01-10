@@ -15,6 +15,8 @@ class IncidentReporting3ViewController: UIViewController {
     @IBOutlet var name: UITextField!
     @IBOutlet var phone: UITextField!
     @IBOutlet var email: UITextField!
+    
+    var witness: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +40,30 @@ class IncidentReporting3ViewController: UIViewController {
         instanceOfGlobalArray.incReporting3.append(email.text!)
     }
     
+    @IBAction func AddAnotherWitnessBtn(_ sender: UIButton)
+    {
+        witness.append(name.text!)
+        witness.append(phone.text!)
+        witness.append(email.text!)
+        
+        let instanceOfGlobalArray: GlobalArray = GlobalArray()
+        
+        instanceOfGlobalArray.incReporting3.append(view1.text!)
+        instanceOfGlobalArray.incReporting3.append(view2.text!)
+        instanceOfGlobalArray.incReporting3.append(name.text!)
+        instanceOfGlobalArray.incReporting3.append(phone.text!)
+        instanceOfGlobalArray.incReporting3.append(email.text!)
+        
+        let alert = UIAlertController(title: "Witness Saved", message: "Please enter next witness.", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+        name.text = ""
+        phone.text = ""
+        email.text = ""
+        
+        
+    }
 
     /*
     // MARK: - Navigation

@@ -28,8 +28,6 @@
 		AE6547421F928E18005A6BB5 /* TableTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6547411F928E18005A6BB5 /* TableTestViewController.swift */; };
 		AE6547441F928FEB005A6BB5 /* SiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6547431F928FEB005A6BB5 /* SiteCell.swift */; };
 		AE78C5061F9D5FF10000DCA5 /* viewControllerBackgroundOnset.png in Resources */ = {isa = PBXBuildFile; fileRef = AE78C5051F9D5FF10000DCA5 /* viewControllerBackgroundOnset.png */; };
-		AE78C5081F9ECF7E0000DCA5 /* HomePageWelcomeNote.png in Resources */ = {isa = PBXBuildFile; fileRef = AE78C5071F9ECF7E0000DCA5 /* HomePageWelcomeNote.png */; };
-		AE78C50A1F9ED0160000DCA5 /* HomePageWelcomeNote2.png in Resources */ = {isa = PBXBuildFile; fileRef = AE78C5091F9ED0160000DCA5 /* HomePageWelcomeNote2.png */; };
 		AE78C50C1F9FDD7F0000DCA5 /* dreamstime_s_17222086.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE78C50B1F9FDD7F0000DCA5 /* dreamstime_s_17222086.jpg */; };
 		AEED86E51FDDCF7C003350CE /* GlobalArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEED86E41FDDCF7C003350CE /* GlobalArray.swift */; };
 		AEEFEEAC1F8D003A00C09797 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEFEEAB1F8D003A00C09797 /* main.m */; };
@@ -42,7 +40,7 @@
 		AEEFEED01F8D003B00C09797 /* SureSafetyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEFEECF1F8D003B00C09797 /* SureSafetyUITests.m */; };
 		AEEFEEDF1F8D961E00C09797 /* footerImage.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEFEEDE1F8D961E00C09797 /* footerImage.png */; };
 		AEEFEEE11F8D996300C09797 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEFEEE01F8D996300C09797 /* Logo.png */; };
-		AEF6E28B1F9025EF00AE3937 /* loginHeader.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEF6E28A1F9025EF00AE3937 /* loginHeader.jpg */; };
+		AEF1AF472005B296002DD7BC /* Suresafety_logo_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF1AF462005B296002DD7BC /* Suresafety_logo_bg.png */; };
 		AEF6E28D1F9026CD00AE3937 /* loginHeader1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEF6E28C1F9026CD00AE3937 /* loginHeader1.jpg */; };
 /* End PBXBuildFile section */
 
@@ -87,8 +85,6 @@
 		AE6547411F928E18005A6BB5 /* TableTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableTestViewController.swift; sourceTree = "<group>"; };
 		AE6547431F928FEB005A6BB5 /* SiteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiteCell.swift; sourceTree = "<group>"; };
 		AE78C5051F9D5FF10000DCA5 /* viewControllerBackgroundOnset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewControllerBackgroundOnset.png; sourceTree = "<group>"; };
-		AE78C5071F9ECF7E0000DCA5 /* HomePageWelcomeNote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomePageWelcomeNote.png; sourceTree = "<group>"; };
-		AE78C5091F9ED0160000DCA5 /* HomePageWelcomeNote2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomePageWelcomeNote2.png; sourceTree = "<group>"; };
 		AE78C50B1F9FDD7F0000DCA5 /* dreamstime_s_17222086.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dreamstime_s_17222086.jpg; sourceTree = "<group>"; };
 		AEED86E41FDDCF7C003350CE /* GlobalArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalArray.swift; sourceTree = "<group>"; };
 		AEEFEEA71F8D003A00C09797 /* SureSafety.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SureSafety.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,7 +105,7 @@
 		AEEFEED11F8D003B00C09797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEEFEEDE1F8D961E00C09797 /* footerImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footerImage.png; sourceTree = "<group>"; };
 		AEEFEEE01F8D996300C09797 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
-		AEF6E28A1F9025EF00AE3937 /* loginHeader.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loginHeader.jpg; sourceTree = "<group>"; };
+		AEF1AF462005B296002DD7BC /* Suresafety_logo_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Suresafety_logo_bg.png; sourceTree = "<group>"; };
 		AEF6E28C1F9026CD00AE3937 /* loginHeader1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loginHeader1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -283,13 +279,11 @@
 		AEEFEEDD1F8D95F800C09797 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AEF1AF462005B296002DD7BC /* Suresafety_logo_bg.png */,
 				AE51FB3A1FAA4DE4005D535C /* unchecked.png */,
 				AE51FB361FAA4D52005D535C /* checkbox-checked.png */,
 				AE78C50B1F9FDD7F0000DCA5 /* dreamstime_s_17222086.jpg */,
-				AE78C5091F9ED0160000DCA5 /* HomePageWelcomeNote2.png */,
-				AE78C5071F9ECF7E0000DCA5 /* HomePageWelcomeNote.png */,
 				AE78C5051F9D5FF10000DCA5 /* viewControllerBackgroundOnset.png */,
-				AEF6E28A1F9025EF00AE3937 /* loginHeader.jpg */,
 				AEF6E28C1F9026CD00AE3937 /* loginHeader1.jpg */,
 				AEEFEEE01F8D996300C09797 /* Logo.png */,
 				AEEFEEDE1F8D961E00C09797 /* footerImage.png */,
@@ -404,19 +398,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEF1AF472005B296002DD7BC /* Suresafety_logo_bg.png in Resources */,
 				AEEFEEDF1F8D961E00C09797 /* footerImage.png in Resources */,
 				AEEFEEBA1F8D003B00C09797 /* LaunchScreen.storyboard in Resources */,
 				AE51FB4C1FBB9ABD005D535C /* SureSafety.db in Resources */,
 				AE51FB381FAA4D52005D535C /* checkbox-checked.png in Resources */,
-				AEF6E28B1F9025EF00AE3937 /* loginHeader.jpg in Resources */,
 				AE51FB3B1FAA4DE4005D535C /* unchecked.png in Resources */,
 				AEEFEEE11F8D996300C09797 /* Logo.png in Resources */,
 				AEF6E28D1F9026CD00AE3937 /* loginHeader1.jpg in Resources */,
 				AE78C50C1F9FDD7F0000DCA5 /* dreamstime_s_17222086.jpg in Resources */,
 				AEEFEEB71F8D003B00C09797 /* Assets.xcassets in Resources */,
-				AE78C5081F9ECF7E0000DCA5 /* HomePageWelcomeNote.png in Resources */,
 				AEEFEEB51F8D003B00C09797 /* Main.storyboard in Resources */,
-				AE78C50A1F9ED0160000DCA5 /* HomePageWelcomeNote2.png in Resources */,
 				AE78C5061F9D5FF10000DCA5 /* viewControllerBackgroundOnset.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

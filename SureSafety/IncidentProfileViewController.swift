@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IncidentProfileViewController: UIViewController /*UITableViewDelegate*/ /*UITableViewDataSource*/ {
+class IncidentProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var firstName: UITextField!
     @IBOutlet var lastName: UITextField!
@@ -17,44 +17,51 @@ class IncidentProfileViewController: UIViewController /*UITableViewDelegate*/ /*
     @IBOutlet var supervisor: UITextField!
     
     var supervisors: [String] = []
-    var departments: [String] = []
+    //var departments: [String] = []
     
+    @IBOutlet weak var DepartmentTableView: UITableView!
+    @IBOutlet weak var SupervisorTableView: UITableView!
+    
+    
+    var departmentsArray = ["Finanace", "Human Resources", "Information Technology", "Research & Development", "Sales", "Purchasing", "Maintenance"]
+    
+    var supervisorsArray = ["Rehanna Nizrudin", "Sheikh Azaad", "Vidur Prakash", "Kanu Mohindra", "Derall Ebanks", "Vidhi Chadha", "Anthony Lionti"]
     
     var info: [String] = []
     
     
-    /*func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let tableCell : SiteCell = tableView.dequeueReusableCell(withIdentifier: "cell") as? SiteCell
             ?? SiteCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
         
-        let hazard = hazards[indexPath.row]
-        tableCell.departmentName.text = hazard
+        let department = departmentsArray[indexPath.row]
+        tableCell.departmentName.text = department
         
         return tableCell
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return hazards.count
+        return departmentsArray.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 30
+        return 40
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         
-        let currentCell = myTableView.cellForRow(at: indexPath) as! SiteCell
-        txt1.text?.append(currentCell.departmentName.text! + ", ")
+        let currentCell = DepartmentTableView.cellForRow(at: indexPath) as! SiteCell
+        department.text = currentCell.departmentName.text!
         
         /*myTableView.dataSource = nil
          myTableView.delegate = nil
          
          myTableView.isHidden = true*/
         
-    }*/
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
