@@ -16,6 +16,8 @@ class IncidentReporting3ViewController: UIViewController {
     @IBOutlet var phone: UITextField!
     @IBOutlet var email: UITextField!
     
+    @IBOutlet weak var AddAnotherWitnessBtn: UIButton!
+    
     var witness: [String] = []
 
     override func viewDidLoad() {
@@ -42,6 +44,7 @@ class IncidentReporting3ViewController: UIViewController {
     
     @IBAction func AddAnotherWitnessBtn(_ sender: UIButton)
     {
+        print("test3")
         witness.append(name.text!)
         witness.append(phone.text!)
         witness.append(email.text!)

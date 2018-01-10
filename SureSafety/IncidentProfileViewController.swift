@@ -30,38 +30,85 @@ class IncidentProfileViewController: UIViewController, UITableViewDelegate, UITa
     var info: [String] = []
     
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
         
-        let tableCell : SiteCell = tableView.dequeueReusableCell(withIdentifier: "cell") as? SiteCell
-            ?? SiteCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
         
-        let department = departmentsArray[indexPath.row]
-        tableCell.departmentName.text = department
+        if (tableView .isEqual(DepartmentTableView)) {
+            let tableCell : SiteCell = tableView.dequeueReusableCell(withIdentifier: "cell") as? SiteCell
+                ?? SiteCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+            
+            let department = departmentsArray[indexPath.row]
+            tableCell.departmentName.text = department
+            return tableCell
+            
+            
+        }
+            
+        else
+        {
+            let tableCell : SiteCell = tableView.dequeueReusableCell(withIdentifier: "cell") as? SiteCell
+                ?? SiteCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+            
+            let supervisor = supervisorsArray[indexPath.row]
+            tableCell.departmentName.text = supervisor
+            return tableCell
+        }
         
-        return tableCell
+        
         
     }
     
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return departmentsArray.count
+        if (tableView .isEqual(DepartmentTableView))
+        {
+            return departmentsArray.count
+        }
+            
+        else
+        {
+            return supervisorsArray.count
+        }
+        
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 40
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        if (tableView .isEqual(DepartmentTableView))
+        {
+            return 40
+        }
+            
+        else
+        {
+            return 40
+        }
+        
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
         
-        
-        let currentCell = DepartmentTableView.cellForRow(at: indexPath) as! SiteCell
-        department.text = currentCell.departmentName.text!
-        
-        /*myTableView.dataSource = nil
-         myTableView.delegate = nil
-         
-         myTableView.isHidden = true*/
+        if (tableView .isEqual(DepartmentTableView))
+        {
+            //print("test")
+            let currentCell = DepartmentTableView.cellForRow(at: indexPath) as! SiteCell
+            department.text = currentCell.departmentName.text!
+        }
+            
+        else if (tableView .isEqual(SupervisorTableView))
+        {
+            print("test2")
+            let currentCell = SupervisorTableView.cellForRow(at: indexPath) as! SiteCell
+            supervisor.text = currentCell.departmentName.text!
+        }
         
     }
+    
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
